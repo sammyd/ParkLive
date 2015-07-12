@@ -42,19 +42,19 @@ extension CarParkStatus : Printable {
 }
 
 public struct CarPark {
-  let status: CarParkStatus
-  let percentage: Int
-  let description: String
-  let name: String
-  let capacity: Int
-  let occupancy: Int
-  let location: CLLocationCoordinate2D
+  public let status: CarParkStatus
+  public let percentage: Int
+  public let description: String
+  public let name: String
+  public let capacity: Int
+  public let occupancy: Int
+  public let location: CLLocationCoordinate2D
 }
 
 private let numberFormatter = NSNumberFormatter()
 
 extension CarPark {
-  init?(dict: [String : AnyObject]) {
+  public init?(dict: [String : AnyObject]) {
     if let statusStr = dict["status"] as? String,
     let percentageStr = dict["percentage"] as? String,
     let percentage = percentageStr.toInt(),
@@ -79,6 +79,5 @@ extension CarPark {
     } else {
       return nil
     }
-
   }
 }

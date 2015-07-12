@@ -28,6 +28,10 @@
 		2204A3351B52FDE70053F9E6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2204A3331B52FDE70053F9E6 /* Interface.storyboard */; };
 		2204A3371B52FDE70053F9E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2204A3361B52FDE70053F9E6 /* Images.xcassets */; };
 		2204A33A1B52FDE70053F9E6 /* ParkLive WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2204A3221B52FDE70053F9E6 /* ParkLive WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2204A3461B53013A0053F9E6 /* CarParkInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A3451B53013A0053F9E6 /* CarParkInterfaceController.swift */; };
+		2204A3471B5301510053F9E6 /* ParkLiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2D41B52F9A90053F9E6 /* ParkLiveKit.framework */; };
+		2204A3481B5301510053F9E6 /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */; };
+		2204A34A1B5303270053F9E6 /* CarParkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A3491B5303270053F9E6 /* CarParkRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +117,8 @@
 		2204A3321B52FDE70053F9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2204A3341B52FDE70053F9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		2204A3361B52FDE70053F9E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2204A3451B53013A0053F9E6 /* CarParkInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkInterfaceController.swift; sourceTree = "<group>"; };
+		2204A3491B5303270053F9E6 /* CarParkRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2204A3471B5301510053F9E6 /* ParkLiveKit.framework in Frameworks */,
+				2204A3481B5301510053F9E6 /* SODAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				2204A3261B52FDE70053F9E6 /* InterfaceController.swift */,
+				2204A3451B53013A0053F9E6 /* CarParkInterfaceController.swift */,
+				2204A3491B5303270053F9E6 /* CarParkRow.swift */,
 				2204A3281B52FDE70053F9E6 /* Images.xcassets */,
 				2204A3241B52FDE70053F9E6 /* Supporting Files */,
 			);
@@ -531,6 +541,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2204A3461B53013A0053F9E6 /* CarParkInterfaceController.swift in Sources */,
+				2204A34A1B5303270053F9E6 /* CarParkRow.swift in Sources */,
 				2204A3271B52FDE70053F9E6 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
