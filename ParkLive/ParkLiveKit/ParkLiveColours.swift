@@ -21,3 +21,21 @@ extension UIColor {
     return UIColor(red: 143/255.0, green: 48/255.0, blue: 56/255.0, alpha: 1.0)
   }
 }
+
+
+extension UIColor {
+  public static func plColourForPercentage(percentage: Int) -> UIColor {
+    let color : UIColor
+    switch percentage {
+    case 0...50:
+      color = UIColor.plGreen
+    case 51...75:
+      color = UIColor.plYellow
+    case 76...95:
+      color = UIColor.plRed
+    default:
+      color = UIColor.blackColor()
+    }
+    return color
+  }
+}

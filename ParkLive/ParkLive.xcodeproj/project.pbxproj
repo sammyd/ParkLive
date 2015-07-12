@@ -32,6 +32,9 @@
 		2204A3471B5301510053F9E6 /* ParkLiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2D41B52F9A90053F9E6 /* ParkLiveKit.framework */; };
 		2204A3481B5301510053F9E6 /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */; };
 		2204A34A1B5303270053F9E6 /* CarParkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A3491B5303270053F9E6 /* CarParkRow.swift */; };
+		22BA88EB1B5313A400C8A5BD /* ParkLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA88EA1B5313A400C8A5BD /* ParkLiveData.swift */; };
+		22DD50EA1B5309FC00505597 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD50E91B5309FC00505597 /* CircularView.swift */; };
+		22DD50EE1B530C5B00505597 /* CarParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD50ED1B530C5B00505597 /* CarParkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +122,9 @@
 		2204A3361B52FDE70053F9E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2204A3451B53013A0053F9E6 /* CarParkInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkInterfaceController.swift; sourceTree = "<group>"; };
 		2204A3491B5303270053F9E6 /* CarParkRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkRow.swift; sourceTree = "<group>"; };
+		22BA88EA1B5313A400C8A5BD /* ParkLiveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkLiveData.swift; sourceTree = "<group>"; };
+		22DD50E91B5309FC00505597 /* CircularView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
+		22DD50ED1B530C5B00505597 /* CarParkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,9 +188,9 @@
 		2204A2AA1B52F88B0053F9E6 /* ParkLive */ = {
 			isa = PBXGroup;
 			children = (
+				22DD50EC1B530C3600505597 /* View Controllers */,
+				22DD50EB1B530C3100505597 /* Views */,
 				2204A2AD1B52F88B0053F9E6 /* AppDelegate.swift */,
-				2204A2AF1B52F88B0053F9E6 /* MasterViewController.swift */,
-				2204A2B11B52F88B0053F9E6 /* DetailViewController.swift */,
 				2204A2B31B52F88B0053F9E6 /* Main.storyboard */,
 				2204A2B61B52F88B0053F9E6 /* Images.xcassets */,
 				2204A2B81B52F88B0053F9E6 /* LaunchScreen.xib */,
@@ -208,6 +214,7 @@
 				2204A2D61B52F9A90053F9E6 /* Supporting Files */,
 				2204A31A1B52FBF30053F9E6 /* CarPark.swift */,
 				2204A31C1B52FC350053F9E6 /* ParkLiveColours.swift */,
+				22BA88EA1B5313A400C8A5BD /* ParkLiveData.swift */,
 			);
 			path = ParkLiveKit;
 			sourceTree = "<group>";
@@ -300,6 +307,24 @@
 				2204A2FA1B52F9F00053F9E6 /* SODAKit */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		22DD50EB1B530C3100505597 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22DD50E91B5309FC00505597 /* CircularView.swift */,
+				22DD50ED1B530C5B00505597 /* CarParkTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		22DD50EC1B530C3600505597 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2204A2AF1B52F88B0053F9E6 /* MasterViewController.swift */,
+				2204A2B11B52F88B0053F9E6 /* DetailViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,8 +540,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2204A2B21B52F88B0053F9E6 /* DetailViewController.swift in Sources */,
+				22DD50EA1B5309FC00505597 /* CircularView.swift in Sources */,
 				2204A2B01B52F88B0053F9E6 /* MasterViewController.swift in Sources */,
 				2204A2AE1B52F88B0053F9E6 /* AppDelegate.swift in Sources */,
+				22DD50EE1B530C5B00505597 /* CarParkTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BA88EB1B5313A400C8A5BD /* ParkLiveData.swift in Sources */,
 				2204A31B1B52FBF30053F9E6 /* CarPark.swift in Sources */,
 				2204A31D1B52FC350053F9E6 /* ParkLiveColours.swift in Sources */,
 			);
@@ -893,6 +921,7 @@
 				2204A33D1B52FDE70053F9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2204A33E1B52FDE70053F9E6 /* Build configuration list for PBXNativeTarget "ParkLive WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -901,6 +930,7 @@
 				2204A3401B52FDE70053F9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

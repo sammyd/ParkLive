@@ -9,7 +9,6 @@
 import WatchKit
 import Foundation
 import ParkLiveKit
-import SODAKit
 
 class CarParkControllerContext {
   let carpark : CarPark
@@ -35,18 +34,13 @@ class InterfaceController: WKInterfaceController {
     super.awakeWithContext(context)
     
     // Configure interface objects here.
-    let client = SODAClient(domain: "data.bathhacked.org", token: "d1TbPXUzf0zqTuCy6MDCTtJR6")
-    let query = client.queryDataset("u3w2-9yme")
-    query.orderDescending("percentage").get {
-      results in
-      switch(results) {
-      case .Dataset(let dataset):
-        let carparks = dataset.map { CarPark(dict: $0) }
-          .filter { $0 != nil }
-          .map { $0! }
+    getCarParkData {
+      carparkData in
+      switch carparkData {
+      case .Result(let carparks):
         self.carparks = carparks
       case .Error(let error):
-        print(error)
+        println(error)
       }
     }
   }

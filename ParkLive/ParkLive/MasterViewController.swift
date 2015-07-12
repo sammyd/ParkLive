@@ -7,23 +7,42 @@
 //
 
 import UIKit
+import ParkLiveKit
 
 class MasterViewController: UITableViewController {
   
-  var objects = [AnyObject]()
+  private var carparks : [CarPark]? {
+    didSet {
+      if carparks != nil {
+        tableView.reloadData()
+      }
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 70
+    
+    getCarParkData {
+      carparkData in
+      switch carparkData {
+      case .Result(let carparks):
+        self.carparks = carparks
+      case .Error(let error):
+        println(error)
+      }
+    }
   }
   
   
   // MARK: - Segues
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "showDetail" {
-      if let indexPath = self.tableView.indexPathForSelectedRow() {
-        let object = objects[indexPath.row] as! NSDate
-        (segue.destinationViewController as! DetailViewController).detailItem = object
+      if let indexPath = self.tableView.indexPathForSelectedRow(),
+        let destVC = segue.destinationViewController as? DetailViewController {
+        //destVC.carpark = carpark
       }
     }
   }
@@ -34,15 +53,17 @@ class MasterViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return objects.count
+    return carparks?.count ?? 0
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
-    
-    let object = objects[indexPath.row] as! NSDate
-    cell.textLabel!.text = object.description
-    return cell
+    if let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as? CarParkTableViewCell,
+      let carpark = carparks?[indexPath.row] {
+        cell.carpark = carpark
+        return cell
+    } else {
+      return UITableViewCell()
+    }
   }
   
 }

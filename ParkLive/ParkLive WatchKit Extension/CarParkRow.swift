@@ -20,18 +20,7 @@ class CarParkRow: NSObject {
       if let carpark = carpark {
         spacesLabel.setText("\(carpark.capacity - carpark.occupancy)")
         nameLabel.setText(carpark.name)
-        let color: UIColor
-        switch carpark.percentage {
-        case 0...50:
-          color = UIColor.plGreen
-        case 51...75:
-          color = UIColor.plYellow
-        case 76...95:
-          color = UIColor.plRed
-        default:
-          color = UIColor.blackColor()
-        }
-        spaceGroup.setBackgroundColor(color)
+        spaceGroup.setBackgroundColor(UIColor.plColourForPercentage(carpark.percentage))
       }
     }
   }
