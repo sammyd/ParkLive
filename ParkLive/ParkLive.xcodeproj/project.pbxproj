@@ -22,6 +22,12 @@
 		2204A3191B52FA860053F9E6 /* SODAClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A3181B52FA860053F9E6 /* SODAClient.swift */; };
 		2204A31B1B52FBF30053F9E6 /* CarPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A31A1B52FBF30053F9E6 /* CarPark.swift */; };
 		2204A31D1B52FC350053F9E6 /* ParkLiveColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A31C1B52FC350053F9E6 /* ParkLiveColours.swift */; };
+		2204A3271B52FDE70053F9E6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A3261B52FDE70053F9E6 /* InterfaceController.swift */; };
+		2204A3291B52FDE70053F9E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2204A3281B52FDE70053F9E6 /* Images.xcassets */; };
+		2204A32D1B52FDE70053F9E6 /* ParkLive WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 2204A32C1B52FDE70053F9E6 /* ParkLive WatchKit App.app */; };
+		2204A3351B52FDE70053F9E6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2204A3331B52FDE70053F9E6 /* Interface.storyboard */; };
+		2204A3371B52FDE70053F9E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2204A3361B52FDE70053F9E6 /* Images.xcassets */; };
+		2204A33A1B52FDE70053F9E6 /* ParkLive WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2204A3221B52FDE70053F9E6 /* ParkLive WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,20 @@
 			remoteGlobalIDString = 2204A2F81B52F9F00053F9E6;
 			remoteInfo = SODAKit;
 		};
+		2204A32E1B52FDE70053F9E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2204A2A01B52F88B0053F9E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2204A32B1B52FDE70053F9E6;
+			remoteInfo = "ParkLive WatchKit App";
+		};
+		2204A3381B52FDE70053F9E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2204A2A01B52F88B0053F9E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2204A3211B52FDE70053F9E6;
+			remoteInfo = "ParkLive WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +72,17 @@
 				2204A2EC1B52F9A90053F9E6 /* ParkLiveKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2204A3411B52FDE70053F9E6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2204A33A1B52FDE70053F9E6 /* ParkLive WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -74,6 +105,14 @@
 		2204A3181B52FA860053F9E6 /* SODAClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SODAClient.swift; sourceTree = "<group>"; };
 		2204A31A1B52FBF30053F9E6 /* CarPark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPark.swift; sourceTree = "<group>"; };
 		2204A31C1B52FC350053F9E6 /* ParkLiveColours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkLiveColours.swift; sourceTree = "<group>"; };
+		2204A3221B52FDE70053F9E6 /* ParkLive WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ParkLive WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2204A3251B52FDE70053F9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2204A3261B52FDE70053F9E6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		2204A3281B52FDE70053F9E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2204A32C1B52FDE70053F9E6 /* ParkLive WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ParkLive WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2204A3321B52FDE70053F9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2204A3341B52FDE70053F9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2204A3361B52FDE70053F9E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,15 +139,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2204A31F1B52FDE70053F9E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2204A29F1B52F88B0053F9E6 = {
 			isa = PBXGroup;
 			children = (
-				2204A2AA1B52F88B0053F9E6 /* ParkLive */,
-				2204A2D51B52F9A90053F9E6 /* ParkLiveKit */,
-				2204A2FA1B52F9F00053F9E6 /* SODAKit */,
+				2204A3441B52FE250053F9E6 /* Utils */,
+				2204A3431B52FE1D0053F9E6 /* watchOS */,
+				2204A3421B52FE170053F9E6 /* iOS */,
 				2204A2A91B52F88B0053F9E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +165,8 @@
 				2204A2A81B52F88B0053F9E6 /* ParkLive.app */,
 				2204A2D41B52F9A90053F9E6 /* ParkLiveKit.framework */,
 				2204A2F91B52F9F00053F9E6 /* SODAKit.framework */,
+				2204A3221B52FDE70053F9E6 /* ParkLive WatchKit Extension.appex */,
+				2204A32C1B52FDE70053F9E6 /* ParkLive WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +230,68 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2204A3231B52FDE70053F9E6 /* ParkLive WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2204A3261B52FDE70053F9E6 /* InterfaceController.swift */,
+				2204A3281B52FDE70053F9E6 /* Images.xcassets */,
+				2204A3241B52FDE70053F9E6 /* Supporting Files */,
+			);
+			path = "ParkLive WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		2204A3241B52FDE70053F9E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2204A3251B52FDE70053F9E6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2204A3301B52FDE70053F9E6 /* ParkLive WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				2204A3331B52FDE70053F9E6 /* Interface.storyboard */,
+				2204A3361B52FDE70053F9E6 /* Images.xcassets */,
+				2204A3311B52FDE70053F9E6 /* Supporting Files */,
+			);
+			path = "ParkLive WatchKit App";
+			sourceTree = "<group>";
+		};
+		2204A3311B52FDE70053F9E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2204A3321B52FDE70053F9E6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2204A3421B52FE170053F9E6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2204A2AA1B52F88B0053F9E6 /* ParkLive */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2204A3431B52FE1D0053F9E6 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				2204A3301B52FDE70053F9E6 /* ParkLive WatchKit App */,
+				2204A3231B52FDE70053F9E6 /* ParkLive WatchKit Extension */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		2204A3441B52FE250053F9E6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2204A2D51B52F9A90053F9E6 /* ParkLiveKit */,
+				2204A2FA1B52F9F00053F9E6 /* SODAKit */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -212,12 +322,14 @@
 				2204A2A51B52F88B0053F9E6 /* Frameworks */,
 				2204A2A61B52F88B0053F9E6 /* Resources */,
 				2204A2F01B52F9AA0053F9E6 /* Embed Frameworks */,
+				2204A3411B52FDE70053F9E6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2204A2EA1B52F9A90053F9E6 /* PBXTargetDependency */,
 				2204A30F1B52F9F00053F9E6 /* PBXTargetDependency */,
+				2204A3391B52FDE70053F9E6 /* PBXTargetDependency */,
 			);
 			name = ParkLive;
 			productName = ParkLive;
@@ -260,6 +372,39 @@
 			productReference = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		2204A3211B52FDE70053F9E6 /* ParkLive WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2204A33E1B52FDE70053F9E6 /* Build configuration list for PBXNativeTarget "ParkLive WatchKit Extension" */;
+			buildPhases = (
+				2204A31E1B52FDE70053F9E6 /* Sources */,
+				2204A31F1B52FDE70053F9E6 /* Frameworks */,
+				2204A3201B52FDE70053F9E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2204A32F1B52FDE70053F9E6 /* PBXTargetDependency */,
+			);
+			name = "ParkLive WatchKit Extension";
+			productName = "ParkLive WatchKit Extension";
+			productReference = 2204A3221B52FDE70053F9E6 /* ParkLive WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		2204A32B1B52FDE70053F9E6 /* ParkLive WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2204A33B1B52FDE70053F9E6 /* Build configuration list for PBXNativeTarget "ParkLive WatchKit App" */;
+			buildPhases = (
+				2204A32A1B52FDE70053F9E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ParkLive WatchKit App";
+			productName = "ParkLive WatchKit App";
+			productReference = 2204A32C1B52FDE70053F9E6 /* ParkLive WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,6 +422,12 @@
 						CreatedOnToolsVersion = 6.4;
 					};
 					2204A2F81B52F9F00053F9E6 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					2204A3211B52FDE70053F9E6 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					2204A32B1B52FDE70053F9E6 = {
 						CreatedOnToolsVersion = 6.4;
 					};
 				};
@@ -297,6 +448,8 @@
 				2204A2A71B52F88B0053F9E6 /* ParkLive */,
 				2204A2D31B52F9A90053F9E6 /* ParkLiveKit */,
 				2204A2F81B52F9F00053F9E6 /* SODAKit */,
+				2204A3211B52FDE70053F9E6 /* ParkLive WatchKit Extension */,
+				2204A32B1B52FDE70053F9E6 /* ParkLive WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +476,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2204A3201B52FDE70053F9E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2204A32D1B52FDE70053F9E6 /* ParkLive WatchKit App.app in Resources */,
+				2204A3291B52FDE70053F9E6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2204A32A1B52FDE70053F9E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2204A3351B52FDE70053F9E6 /* Interface.storyboard in Resources */,
+				2204A3371B52FDE70053F9E6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +527,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2204A31E1B52FDE70053F9E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2204A3271B52FDE70053F9E6 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -368,6 +547,16 @@
 			isa = PBXTargetDependency;
 			target = 2204A2F81B52F9F00053F9E6 /* SODAKit */;
 			targetProxy = 2204A30E1B52F9F00053F9E6 /* PBXContainerItemProxy */;
+		};
+		2204A32F1B52FDE70053F9E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2204A32B1B52FDE70053F9E6 /* ParkLive WatchKit App */;
+			targetProxy = 2204A32E1B52FDE70053F9E6 /* PBXContainerItemProxy */;
+		};
+		2204A3391B52FDE70053F9E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2204A3211B52FDE70053F9E6 /* ParkLive WatchKit Extension */;
+			targetProxy = 2204A3381B52FDE70053F9E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -386,6 +575,14 @@
 				2204A2B91B52F88B0053F9E6 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		2204A3331B52FDE70053F9E6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2204A3341B52FDE70053F9E6 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -582,6 +779,62 @@
 			};
 			name = Release;
 		};
+		2204A33C1B52FDE70053F9E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = ParkLive_WatchKit_Extension;
+				INFOPLIST_FILE = "ParkLive WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		2204A33D1B52FDE70053F9E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = ParkLive_WatchKit_Extension;
+				INFOPLIST_FILE = "ParkLive WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		2204A33F1B52FDE70053F9E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ParkLive WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2204A3401B52FDE70053F9E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ParkLive WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -620,6 +873,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2204A33B1B52FDE70053F9E6 /* Build configuration list for PBXNativeTarget "ParkLive WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2204A33C1B52FDE70053F9E6 /* Debug */,
+				2204A33D1B52FDE70053F9E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2204A33E1B52FDE70053F9E6 /* Build configuration list for PBXNativeTarget "ParkLive WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2204A33F1B52FDE70053F9E6 /* Debug */,
+				2204A3401B52FDE70053F9E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
