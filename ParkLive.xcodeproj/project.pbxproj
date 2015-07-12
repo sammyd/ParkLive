@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		222D7F401B52792900A168DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F3F1B52792900A168DA /* AppDelegate.swift */; };
+		222D7F421B52792900A168DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F411B52792900A168DA /* ViewController.swift */; };
+		222D7F451B52792900A168DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222D7F431B52792900A168DA /* Main.storyboard */; };
+		222D7F471B52792900A168DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222D7F461B52792900A168DA /* Assets.xcassets */; };
+		222D7F4A1B52792900A168DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222D7F481B52792900A168DA /* LaunchScreen.storyboard */; };
+		222D7F4F1B52792900A168DA /* ParkLive WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 222D7F4E1B52792900A168DA /* ParkLive WatchKit App.app */; };
+		222D7F551B52792900A168DA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222D7F531B52792900A168DA /* Interface.storyboard */; };
+		222D7F571B52792900A168DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222D7F561B52792900A168DA /* Assets.xcassets */; };
+		222D7F5E1B52792900A168DA /* ParkLive WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 222D7F5D1B52792900A168DA /* ParkLive WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		222D7F651B52792900A168DA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F641B52792900A168DA /* InterfaceController.swift */; };
+		222D7F671B52792900A168DA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F661B52792900A168DA /* ExtensionDelegate.swift */; };
+		222D7F691B52792900A168DA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F681B52792900A168DA /* NotificationController.swift */; };
+		222D7F6B1B52792900A168DA /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F6A1B52792900A168DA /* GlanceController.swift */; };
+		222D7F6D1B52792900A168DA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F6C1B52792900A168DA /* ComplicationController.swift */; };
+		222D7F6F1B52792900A168DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222D7F6E1B52792900A168DA /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		222D7F501B52792900A168DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 222D7F341B52792900A168DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 222D7F4D1B52792900A168DA;
+			remoteInfo = "ParkLive WatchKit App";
+		};
+		222D7F5F1B52792900A168DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 222D7F341B52792900A168DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 222D7F5C1B52792900A168DA;
+			remoteInfo = "ParkLive WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		222D7F761B52792900A168DA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				222D7F5E1B52792900A168DA /* ParkLive WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222D7F7A1B52792900A168DA /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				222D7F4F1B52792900A168DA /* ParkLive WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		222D7F3C1B52792900A168DA /* ParkLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		222D7F3F1B52792900A168DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		222D7F411B52792900A168DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		222D7F441B52792900A168DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		222D7F461B52792900A168DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		222D7F491B52792900A168DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		222D7F4B1B52792900A168DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222D7F4E1B52792900A168DA /* ParkLive WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ParkLive WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		222D7F541B52792900A168DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		222D7F561B52792900A168DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		222D7F581B52792900A168DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222D7F5D1B52792900A168DA /* ParkLive WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ParkLive WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		222D7F631B52792900A168DA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		222D7F641B52792900A168DA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		222D7F661B52792900A168DA /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		222D7F681B52792900A168DA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		222D7F6A1B52792900A168DA /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		222D7F6C1B52792900A168DA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		222D7F6E1B52792900A168DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		222D7F701B52792900A168DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		222D7F391B52792900A168DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222D7F5A1B52792900A168DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		222D7F331B52792900A168DA = {
+			isa = PBXGroup;
+			children = (
+				222D7F3E1B52792900A168DA /* ParkLive */,
+				222D7F521B52792900A168DA /* ParkLive WatchKit App */,
+				222D7F611B52792900A168DA /* ParkLive WatchKit Extension */,
+				222D7F3D1B52792900A168DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		222D7F3D1B52792900A168DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				222D7F3C1B52792900A168DA /* ParkLive.app */,
+				222D7F4E1B52792900A168DA /* ParkLive WatchKit App.app */,
+				222D7F5D1B52792900A168DA /* ParkLive WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		222D7F3E1B52792900A168DA /* ParkLive */ = {
+			isa = PBXGroup;
+			children = (
+				222D7F3F1B52792900A168DA /* AppDelegate.swift */,
+				222D7F411B52792900A168DA /* ViewController.swift */,
+				222D7F431B52792900A168DA /* Main.storyboard */,
+				222D7F461B52792900A168DA /* Assets.xcassets */,
+				222D7F481B52792900A168DA /* LaunchScreen.storyboard */,
+				222D7F4B1B52792900A168DA /* Info.plist */,
+			);
+			path = ParkLive;
+			sourceTree = "<group>";
+		};
+		222D7F521B52792900A168DA /* ParkLive WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				222D7F531B52792900A168DA /* Interface.storyboard */,
+				222D7F561B52792900A168DA /* Assets.xcassets */,
+				222D7F581B52792900A168DA /* Info.plist */,
+			);
+			path = "ParkLive WatchKit App";
+			sourceTree = "<group>";
+		};
+		222D7F611B52792900A168DA /* ParkLive WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				222D7F641B52792900A168DA /* InterfaceController.swift */,
+				222D7F661B52792900A168DA /* ExtensionDelegate.swift */,
+				222D7F681B52792900A168DA /* NotificationController.swift */,
+				222D7F6A1B52792900A168DA /* GlanceController.swift */,
+				222D7F6C1B52792900A168DA /* ComplicationController.swift */,
+				222D7F6E1B52792900A168DA /* Assets.xcassets */,
+				222D7F701B52792900A168DA /* Info.plist */,
+				222D7F621B52792900A168DA /* Supporting Files */,
+			);
+			path = "ParkLive WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		222D7F621B52792900A168DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				222D7F631B52792900A168DA /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		222D7F3B1B52792900A168DA /* ParkLive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222D7F7B1B52792900A168DA /* Build configuration list for PBXNativeTarget "ParkLive" */;
+			buildPhases = (
+				222D7F381B52792900A168DA /* Sources */,
+				222D7F391B52792900A168DA /* Frameworks */,
+				222D7F3A1B52792900A168DA /* Resources */,
+				222D7F7A1B52792900A168DA /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				222D7F511B52792900A168DA /* PBXTargetDependency */,
+			);
+			name = ParkLive;
+			productName = ParkLive;
+			productReference = 222D7F3C1B52792900A168DA /* ParkLive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		222D7F4D1B52792900A168DA /* ParkLive WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222D7F771B52792900A168DA /* Build configuration list for PBXNativeTarget "ParkLive WatchKit App" */;
+			buildPhases = (
+				222D7F4C1B52792900A168DA /* Resources */,
+				222D7F761B52792900A168DA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				222D7F601B52792900A168DA /* PBXTargetDependency */,
+			);
+			name = "ParkLive WatchKit App";
+			productName = "ParkLive WatchKit App";
+			productReference = 222D7F4E1B52792900A168DA /* ParkLive WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		222D7F5C1B52792900A168DA /* ParkLive WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222D7F731B52792900A168DA /* Build configuration list for PBXNativeTarget "ParkLive WatchKit Extension" */;
+			buildPhases = (
+				222D7F591B52792900A168DA /* Sources */,
+				222D7F5A1B52792900A168DA /* Frameworks */,
+				222D7F5B1B52792900A168DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ParkLive WatchKit Extension";
+			productName = "ParkLive WatchKit Extension";
+			productReference = 222D7F5D1B52792900A168DA /* ParkLive WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		222D7F341B52792900A168DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = VisualPutty;
+				TargetAttributes = {
+					222D7F3B1B52792900A168DA = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					222D7F4D1B52792900A168DA = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					222D7F5C1B52792900A168DA = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 222D7F371B52792900A168DA /* Build configuration list for PBXProject "ParkLive" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 222D7F331B52792900A168DA;
+			productRefGroup = 222D7F3D1B52792900A168DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				222D7F3B1B52792900A168DA /* ParkLive */,
+				222D7F4D1B52792900A168DA /* ParkLive WatchKit App */,
+				222D7F5C1B52792900A168DA /* ParkLive WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		222D7F3A1B52792900A168DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222D7F4A1B52792900A168DA /* LaunchScreen.storyboard in Resources */,
+				222D7F471B52792900A168DA /* Assets.xcassets in Resources */,
+				222D7F451B52792900A168DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222D7F4C1B52792900A168DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222D7F571B52792900A168DA /* Assets.xcassets in Resources */,
+				222D7F551B52792900A168DA /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222D7F5B1B52792900A168DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222D7F6F1B52792900A168DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		222D7F381B52792900A168DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222D7F421B52792900A168DA /* ViewController.swift in Sources */,
+				222D7F401B52792900A168DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222D7F591B52792900A168DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222D7F691B52792900A168DA /* NotificationController.swift in Sources */,
+				222D7F671B52792900A168DA /* ExtensionDelegate.swift in Sources */,
+				222D7F6D1B52792900A168DA /* ComplicationController.swift in Sources */,
+				222D7F651B52792900A168DA /* InterfaceController.swift in Sources */,
+				222D7F6B1B52792900A168DA /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		222D7F511B52792900A168DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 222D7F4D1B52792900A168DA /* ParkLive WatchKit App */;
+			targetProxy = 222D7F501B52792900A168DA /* PBXContainerItemProxy */;
+		};
+		222D7F601B52792900A168DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 222D7F5C1B52792900A168DA /* ParkLive WatchKit Extension */;
+			targetProxy = 222D7F5F1B52792900A168DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		222D7F431B52792900A168DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				222D7F441B52792900A168DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		222D7F481B52792900A168DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				222D7F491B52792900A168DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		222D7F531B52792900A168DA /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				222D7F541B52792900A168DA /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		222D7F711B52792900A168DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		222D7F721B52792900A168DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		222D7F741B52792900A168DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "ParkLive WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		222D7F751B52792900A168DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "ParkLive WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		222D7F781B52792900A168DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = ParkLive_WatchKit_Extension;
+				INFOPLIST_FILE = "ParkLive WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		222D7F791B52792900A168DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = ParkLive_WatchKit_Extension;
+				INFOPLIST_FILE = "ParkLive WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		222D7F7C1B52792900A168DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ParkLive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		222D7F7D1B52792900A168DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ParkLive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		222D7F371B52792900A168DA /* Build configuration list for PBXProject "ParkLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222D7F711B52792900A168DA /* Debug */,
+				222D7F721B52792900A168DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		222D7F731B52792900A168DA /* Build configuration list for PBXNativeTarget "ParkLive WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222D7F741B52792900A168DA /* Debug */,
+				222D7F751B52792900A168DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		222D7F771B52792900A168DA /* Build configuration list for PBXNativeTarget "ParkLive WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222D7F781B52792900A168DA /* Debug */,
+				222D7F791B52792900A168DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		222D7F7B1B52792900A168DA /* Build configuration list for PBXNativeTarget "ParkLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222D7F7C1B52792900A168DA /* Debug */,
+				222D7F7D1B52792900A168DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 222D7F341B52792900A168DA /* Project object */;
+}
