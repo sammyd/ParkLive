@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		222D7F6B1B52792900A168DA /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F6A1B52792900A168DA /* GlanceController.swift */; };
 		222D7F6D1B52792900A168DA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F6C1B52792900A168DA /* ComplicationController.swift */; };
 		222D7F6F1B52792900A168DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222D7F6E1B52792900A168DA /* Assets.xcassets */; };
+		222D7F881B528D4500A168DA /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222D7F871B528D4500A168DA /* SODAKit.framework */; };
+		222D7F991B5292D500A168DA /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222D7F981B5292D500A168DA /* SODAKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		222D7F6C1B52792900A168DA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		222D7F6E1B52792900A168DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222D7F701B52792900A168DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222D7F871B528D4500A168DA /* SODAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SODAKit.framework; path = ../Carthage/Build/iOS/SODAKit.framework; sourceTree = "<group>"; };
+		222D7F981B5292D500A168DA /* SODAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SODAKit.framework; path = Carthage/Build/watchOS/SODAKit.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222D7F881B528D4500A168DA /* SODAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222D7F991B5292D500A168DA /* SODAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +136,7 @@
 		222D7F3E1B52792900A168DA /* ParkLive */ = {
 			isa = PBXGroup;
 			children = (
+				222D7F871B528D4500A168DA /* SODAKit.framework */,
 				222D7F3F1B52792900A168DA /* AppDelegate.swift */,
 				222D7F411B52792900A168DA /* ViewController.swift */,
 				222D7F431B52792900A168DA /* Main.storyboard */,
@@ -153,6 +160,7 @@
 		222D7F611B52792900A168DA /* ParkLive WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				222D7F981B5292D500A168DA /* SODAKit.framework */,
 				222D7F641B52792900A168DA /* InterfaceController.swift */,
 				222D7F661B52792900A168DA /* ExtensionDelegate.swift */,
 				222D7F681B52792900A168DA /* NotificationController.swift */,
@@ -184,6 +192,7 @@
 				222D7F391B52792900A168DA /* Frameworks */,
 				222D7F3A1B52792900A168DA /* Resources */,
 				222D7F7A1B52792900A168DA /* Embed Watch Content */,
+				222D7F801B527C7900A168DA /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,17 +249,20 @@
 				TargetAttributes = {
 					222D7F3B1B52792900A168DA = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = D23W9URMHY;
 					};
 					222D7F4D1B52792900A168DA = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = D23W9URMHY;
 					};
 					222D7F5C1B52792900A168DA = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = D23W9URMHY;
 					};
 				};
 			};
 			buildConfigurationList = 222D7F371B52792900A168DA /* Build configuration list for PBXProject "ParkLive" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -298,6 +310,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		222D7F801B527C7900A168DA /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SODAKit.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		222D7F381B52792900A168DA /* Sources */ = {
@@ -451,6 +481,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS/";
 				INFOPLIST_FILE = "ParkLive WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive.watchkitapp.watchkitextension;
@@ -466,6 +498,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS/";
 				INFOPLIST_FILE = "ParkLive WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive.watchkitapp.watchkitextension;
@@ -481,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = ParkLive_WatchKit_Extension;
 				INFOPLIST_FILE = "ParkLive WatchKit App/Info.plist";
@@ -497,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = ParkLive_WatchKit_Extension;
 				INFOPLIST_FILE = "ParkLive WatchKit App/Info.plist";
@@ -513,6 +549,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/";
 				INFOPLIST_FILE = ParkLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive;
@@ -524,6 +562,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/";
 				INFOPLIST_FILE = ParkLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive;
