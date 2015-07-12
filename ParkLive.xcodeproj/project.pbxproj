@@ -22,8 +22,14 @@
 		222D7F6B1B52792900A168DA /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F6A1B52792900A168DA /* GlanceController.swift */; };
 		222D7F6D1B52792900A168DA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F6C1B52792900A168DA /* ComplicationController.swift */; };
 		222D7F6F1B52792900A168DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222D7F6E1B52792900A168DA /* Assets.xcassets */; };
-		222D7F881B528D4500A168DA /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222D7F871B528D4500A168DA /* SODAKit.framework */; };
-		222D7F991B5292D500A168DA /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222D7F981B5292D500A168DA /* SODAKit.framework */; };
+		222D7F9D1B52A55600A168DA /* SODAKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F9C1B52A55600A168DA /* SODAKit.swift */; };
+		222D7F9E1B52A58000A168DA /* SODAKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F9C1B52A55600A168DA /* SODAKit.swift */; };
+		222D7FA01B52AD1E00A168DA /* CarPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F9F1B52AD1E00A168DA /* CarPark.swift */; };
+		222D7FA11B52AD1E00A168DA /* CarPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7F9F1B52AD1E00A168DA /* CarPark.swift */; };
+		222D7FA41B52BBA700A168DA /* CarParkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7FA31B52BBA700A168DA /* CarParkRow.swift */; };
+		222D7FA51B52BBA700A168DA /* CarParkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7FA31B52BBA700A168DA /* CarParkRow.swift */; };
+		222D7FA71B52C31D00A168DA /* ParkLiveShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7FA61B52C31D00A168DA /* ParkLiveShared.swift */; };
+		222D7FA81B52C31D00A168DA /* ParkLiveShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7FA61B52C31D00A168DA /* ParkLiveShared.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +95,10 @@
 		222D7F6C1B52792900A168DA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		222D7F6E1B52792900A168DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222D7F701B52792900A168DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		222D7F871B528D4500A168DA /* SODAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SODAKit.framework; path = ../Carthage/Build/iOS/SODAKit.framework; sourceTree = "<group>"; };
-		222D7F981B5292D500A168DA /* SODAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SODAKit.framework; path = Carthage/Build/watchOS/SODAKit.framework; sourceTree = SOURCE_ROOT; };
+		222D7F9C1B52A55600A168DA /* SODAKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SODAKit.swift; path = SODAKit/SODAKit.swift; sourceTree = "<group>"; };
+		222D7F9F1B52AD1E00A168DA /* CarPark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPark.swift; sourceTree = "<group>"; };
+		222D7FA31B52BBA700A168DA /* CarParkRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkRow.swift; sourceTree = "<group>"; };
+		222D7FA61B52C31D00A168DA /* ParkLiveShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkLiveShared.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				222D7F881B528D4500A168DA /* SODAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				222D7F991B5292D500A168DA /* SODAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +122,7 @@
 		222D7F331B52792900A168DA = {
 			isa = PBXGroup;
 			children = (
+				222D7F9B1B52A53600A168DA /* SODAKit */,
 				222D7F3E1B52792900A168DA /* ParkLive */,
 				222D7F521B52792900A168DA /* ParkLive WatchKit App */,
 				222D7F611B52792900A168DA /* ParkLive WatchKit Extension */,
@@ -136,7 +143,6 @@
 		222D7F3E1B52792900A168DA /* ParkLive */ = {
 			isa = PBXGroup;
 			children = (
-				222D7F871B528D4500A168DA /* SODAKit.framework */,
 				222D7F3F1B52792900A168DA /* AppDelegate.swift */,
 				222D7F411B52792900A168DA /* ViewController.swift */,
 				222D7F431B52792900A168DA /* Main.storyboard */,
@@ -160,8 +166,7 @@
 		222D7F611B52792900A168DA /* ParkLive WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				222D7F981B5292D500A168DA /* SODAKit.framework */,
-				222D7F641B52792900A168DA /* InterfaceController.swift */,
+				222D7FA21B52BB8800A168DA /* App */,
 				222D7F661B52792900A168DA /* ExtensionDelegate.swift */,
 				222D7F681B52792900A168DA /* NotificationController.swift */,
 				222D7F6A1B52792900A168DA /* GlanceController.swift */,
@@ -181,6 +186,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		222D7F9B1B52A53600A168DA /* SODAKit */ = {
+			isa = PBXGroup;
+			children = (
+				222D7F9C1B52A55600A168DA /* SODAKit.swift */,
+				222D7F9F1B52AD1E00A168DA /* CarPark.swift */,
+				222D7FA61B52C31D00A168DA /* ParkLiveShared.swift */,
+			);
+			name = SODAKit;
+			sourceTree = "<group>";
+		};
+		222D7FA21B52BB8800A168DA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				222D7F641B52792900A168DA /* InterfaceController.swift */,
+				222D7FA31B52BBA700A168DA /* CarParkRow.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,7 +216,6 @@
 				222D7F391B52792900A168DA /* Frameworks */,
 				222D7F3A1B52792900A168DA /* Resources */,
 				222D7F7A1B52792900A168DA /* Embed Watch Content */,
-				222D7F801B527C7900A168DA /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,31 +334,17 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		222D7F801B527C7900A168DA /* Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/SODAKit.framework",
-			);
-			name = "Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		222D7F381B52792900A168DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222D7FA71B52C31D00A168DA /* ParkLiveShared.swift in Sources */,
+				222D7FA01B52AD1E00A168DA /* CarPark.swift in Sources */,
 				222D7F421B52792900A168DA /* ViewController.swift in Sources */,
 				222D7F401B52792900A168DA /* AppDelegate.swift in Sources */,
+				222D7FA41B52BBA700A168DA /* CarParkRow.swift in Sources */,
+				222D7F9E1B52A58000A168DA /* SODAKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,10 +353,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				222D7F691B52792900A168DA /* NotificationController.swift in Sources */,
+				222D7FA11B52AD1E00A168DA /* CarPark.swift in Sources */,
 				222D7F671B52792900A168DA /* ExtensionDelegate.swift in Sources */,
 				222D7F6D1B52792900A168DA /* ComplicationController.swift in Sources */,
 				222D7F651B52792900A168DA /* InterfaceController.swift in Sources */,
 				222D7F6B1B52792900A168DA /* GlanceController.swift in Sources */,
+				222D7FA81B52C31D00A168DA /* ParkLiveShared.swift in Sources */,
+				222D7F9D1B52A55600A168DA /* SODAKit.swift in Sources */,
+				222D7FA51B52BBA700A168DA /* CarParkRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +495,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS/";
 				INFOPLIST_FILE = "ParkLive WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive.watchkitapp.watchkitextension;
@@ -499,7 +511,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS/";
 				INFOPLIST_FILE = "ParkLive WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive.watchkitapp.watchkitextension;
@@ -550,7 +561,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/";
 				INFOPLIST_FILE = ParkLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive;
@@ -563,7 +573,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/";
 				INFOPLIST_FILE = ParkLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.visualputty.ParkLive;

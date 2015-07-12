@@ -12,7 +12,7 @@
                     <items>
                         <table alignment="left" id="kvO-Uk-hTz">
                             <items>
-                                <tableRow identifier="CarParkSpace" id="UdJ-0W-4EP">
+                                <tableRow identifier="CarParkRow" id="UdJ-0W-4EP" customClass="CarParkRow" customModule="ParkLive_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" spacing="5" id="baZ-UZ-XrO">
                                         <items>
                                             <group width="30" height="30" alignment="left" verticalAlignment="center" radius="15" id="sKe-OS-8s1">
@@ -24,10 +24,18 @@
                                             <label alignment="left" verticalAlignment="center" text="Car Park Name" numberOfLines="0" id="v0O-l2-2oc"/>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="v0O-l2-2oc" id="VPh-Bo-mmy"/>
+                                        <outlet property="spaceGroup" destination="sKe-OS-8s1" id="oU1-S2-Dey"/>
+                                        <outlet property="spacesLabel" destination="g8v-gq-UdV" id="OFy-ws-IJR"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="carparkTable" destination="kvO-Uk-hTz" id="1ps-Ul-fbz"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
