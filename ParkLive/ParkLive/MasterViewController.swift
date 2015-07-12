@@ -42,7 +42,8 @@ class MasterViewController: UITableViewController {
     if segue.identifier == "showDetail" {
       if let indexPath = self.tableView.indexPathForSelectedRow(),
         let destVC = segue.destinationViewController as? DetailViewController {
-        //destVC.carpark = carpark
+          let carpark = carparks![indexPath.row]
+          destVC.carpark = carpark
       }
     }
   }

@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import ParkLiveKit
+import MapKit
 
 class DetailViewController: UIViewController {
   
-  @IBOutlet weak var detailDescriptionLabel: UILabel!
-  
-  var detailItem: AnyObject? {
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var percentageLabel: UILabel!
+  @IBOutlet weak var percentageBackground: CircularView!
+  @IBOutlet weak var totalSpacesLabel: UILabel!
+  @IBOutlet weak var availableSpacesLabel: UILabel!
+  @IBOutlet weak var statusLabel: UILabel!
+  @IBOutlet weak var detailsLabel: UILabel!
+  @IBOutlet weak var mapView: MKMapView!
+
+  var carpark: CarPark? {
     didSet {
       // Update the view.
       self.configureView()
@@ -21,10 +30,21 @@ class DetailViewController: UIViewController {
   
   func configureView() {
     // Update the user interface for the detail item.
-    if let detail: AnyObject = self.detailItem {
-      if let label = self.detailDescriptionLabel {
-        label.text = detail.description
-      }
+    if let carpark = carpark {
+      nameLabel?.text = carpark.name
+      percentageLabel?.text = "\(carpark.percentage)%"
+      percentageBackground?.backgroundColor = UIColor.plColourForPercentage(carpark.percentage)
+      totalSpacesLabel?.text = "\(carpark.capacity) Total Spaces"
+      availableSpacesLabel?.text = "\(carpark.capacity - carpark.occupancy) Available"
+      statusLabel?.text = "\(carpark.status)"
+      detailsLabel?.text = "\(carpark.description)"
+      
+      let zoomRegion = MKCoordinateRegionMakeWithDistance(carpark.location, 1000, 1000)
+      mapView?.setRegion(zoomRegion, animated: true)
+      
+      let annotation = MKPointAnnotation()
+      annotation.coordinate = carpark.location
+      mapView?.addAnnotation(annotation)
     }
   }
   
