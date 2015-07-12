@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8077.2"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--ParkLive-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ParkLive_WatchKit_App" customModuleProvider="target">
+                <controller title="ParkLive" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ParkLive_WatchKit_App" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="kvO-Uk-hTz">
                             <items>
@@ -28,6 +28,7 @@
                                         <outlet property="nameLabel" destination="v0O-l2-2oc" id="VPh-Bo-mmy"/>
                                         <outlet property="spaceGroup" destination="sKe-OS-8s1" id="oU1-S2-Dey"/>
                                         <outlet property="spacesLabel" destination="g8v-gq-UdV" id="OFy-ws-IJR"/>
+                                        <segue destination="qkC-Ex-0xt" kind="push" id="B06-KG-Lt6"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -39,6 +40,50 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Car Park Interface Controller-->
+        <scene sceneID="Ro0-GY-QaV">
+            <objects>
+                <controller hidesWhenLoading="NO" id="qkC-Ex-0xt" customClass="CarParkInterfaceController" customModule="ParkLive_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="CarParkName" numberOfLines="0" id="AX4-Wr-uk4">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <group width="1" alignment="left" id="4yW-LS-k5T">
+                            <items>
+                                <label alignment="left" text="Total Spaces:" id="B3C-i1-KKb"/>
+                                <label alignment="left" text="1200" id="F0S-z0-9aB"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="ugx-zs-OlO">
+                            <items>
+                                <group width="60" height="60" alignment="left" verticalAlignment="center" backgroundImage="parkring50" contentMode="center" id="Uz3-uU-ct6">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="50%" id="j0V-64-Eui"/>
+                                    </items>
+                                </group>
+                                <group height="44" alignment="left" verticalAlignment="center" layout="vertical" id="RiZ-tC-xqp">
+                                    <items>
+                                        <label alignment="left" text="1200 Free" id="LGb-FY-8al"/>
+                                        <label alignment="left" text="Emptying" id="xS5-5I-emt"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <map width="1" height="100" alignment="left" id="l0J-Yw-OQ6"/>
+                    </items>
+                    <connections>
+                        <outlet property="freeSpacesLabel" destination="LGb-FY-8al" id="pFc-zp-Pzh"/>
+                        <outlet property="map" destination="l0J-Yw-OQ6" id="C6E-uE-Oj0"/>
+                        <outlet property="nameLabel" destination="AX4-Wr-uk4" id="ZI1-pc-aSX"/>
+                        <outlet property="percentageLabel" destination="j0V-64-Eui" id="EIY-qU-IiE"/>
+                        <outlet property="percentageRingGroup" destination="Uz3-uU-ct6" id="Tm9-rq-uAT"/>
+                        <outlet property="statusLabel" destination="xS5-5I-emt" id="68H-Cf-aFz"/>
+                        <outlet property="totalSpacesLabel" destination="F0S-z0-9aB" id="sCo-Be-hbL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="510" y="346.5"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
@@ -77,4 +122,5 @@
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.73688759083388078" green="0.3327610950846116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

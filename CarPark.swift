@@ -28,6 +28,19 @@ extension CarParkStatus {
   }
 }
 
+extension CarParkStatus : CustomStringConvertible {
+  var description : String {
+    switch self {
+    case .Emptying:
+      return "Emptying"
+    case .Filling:
+      return "Filling"
+    case .Unknown:
+      return "Unknown"
+    }
+  }
+}
+
 struct CarPark {
   let status: CarParkStatus
   let percentage: Int

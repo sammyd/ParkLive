@@ -30,6 +30,7 @@
 		222D7FA51B52BBA700A168DA /* CarParkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7FA31B52BBA700A168DA /* CarParkRow.swift */; };
 		222D7FA71B52C31D00A168DA /* ParkLiveShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7FA61B52C31D00A168DA /* ParkLiveShared.swift */; };
 		222D7FA81B52C31D00A168DA /* ParkLiveShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7FA61B52C31D00A168DA /* ParkLiveShared.swift */; };
+		222D7FAB1B52CCD200A168DA /* CarParkInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D7FA91B52CCD200A168DA /* CarParkInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		222D7F9F1B52AD1E00A168DA /* CarPark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPark.swift; sourceTree = "<group>"; };
 		222D7FA31B52BBA700A168DA /* CarParkRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkRow.swift; sourceTree = "<group>"; };
 		222D7FA61B52C31D00A168DA /* ParkLiveShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkLiveShared.swift; sourceTree = "<group>"; };
+		222D7FA91B52CCD200A168DA /* CarParkInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			children = (
 				222D7F641B52792900A168DA /* InterfaceController.swift */,
 				222D7FA31B52BBA700A168DA /* CarParkRow.swift */,
+				222D7FA91B52CCD200A168DA /* CarParkInterfaceController.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				222D7FA11B52AD1E00A168DA /* CarPark.swift in Sources */,
 				222D7F671B52792900A168DA /* ExtensionDelegate.swift in Sources */,
 				222D7F6D1B52792900A168DA /* ComplicationController.swift in Sources */,
+				222D7FAB1B52CCD200A168DA /* CarParkInterfaceController.swift in Sources */,
 				222D7F651B52792900A168DA /* InterfaceController.swift in Sources */,
 				222D7F6B1B52792900A168DA /* GlanceController.swift in Sources */,
 				222D7FA81B52C31D00A168DA /* ParkLiveShared.swift in Sources */,

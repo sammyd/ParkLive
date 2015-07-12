@@ -9,6 +9,14 @@
 import WatchKit
 import Foundation
 
+class CarParkControllerContext {
+  let carpark : CarPark
+  
+  init(carpark: CarPark) {
+    self.carpark = carpark
+  }
+}
+
 class InterfaceController: WKInterfaceController {
   
   @IBOutlet var carparkTable: WKInterfaceTable!
@@ -50,6 +58,13 @@ class InterfaceController: WKInterfaceController {
     super.didDeactivate()
   }
   
+  
+  override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
+    guard let carparks = carparks else { return nil }
+    
+    let carpark = carparks[rowIndex]
+    return CarParkControllerContext(carpark: carpark)
+  }
   
   private func configureTableWithData(data: [CarPark]) {
     carparkTable.setNumberOfRows(data.count, withRowType: "CarParkRow")
