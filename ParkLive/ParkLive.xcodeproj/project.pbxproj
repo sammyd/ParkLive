@@ -19,6 +19,7 @@
 		2204A2FE1B52F9F00053F9E6 /* SODAKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2204A2FD1B52F9F00053F9E6 /* SODAKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2204A3101B52F9F00053F9E6 /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */; };
 		2204A3111B52F9F00053F9E6 /* SODAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2204A3191B52FA860053F9E6 /* SODAClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A3181B52FA860053F9E6 /* SODAClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		2204A2F91B52F9F00053F9E6 /* SODAKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SODAKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2204A2FC1B52F9F00053F9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2204A2FD1B52F9F00053F9E6 /* SODAKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SODAKit.h; sourceTree = "<group>"; };
+		2204A3181B52FA860053F9E6 /* SODAClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SODAClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				2204A2FD1B52F9F00053F9E6 /* SODAKit.h */,
 				2204A2FB1B52F9F00053F9E6 /* Supporting Files */,
+				2204A3181B52FA860053F9E6 /* SODAClient.swift */,
 			);
 			path = SODAKit;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2204A3191B52FA860053F9E6 /* SODAClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +528,7 @@
 		2204A3131B52F9F00053F9E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -538,6 +543,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -547,6 +553,7 @@
 		2204A3141B52F9F00053F9E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
