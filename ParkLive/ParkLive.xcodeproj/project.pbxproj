@@ -13,18 +13,45 @@
 		2204A2B51B52F88B0053F9E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2204A2B31B52F88B0053F9E6 /* Main.storyboard */; };
 		2204A2B71B52F88B0053F9E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2204A2B61B52F88B0053F9E6 /* Images.xcassets */; };
 		2204A2BA1B52F88B0053F9E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2204A2B81B52F88B0053F9E6 /* LaunchScreen.xib */; };
-		2204A2C61B52F88B0053F9E6 /* ParkLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A2C51B52F88B0053F9E6 /* ParkLiveTests.swift */; };
+		2204A2D91B52F9A90053F9E6 /* ParkLiveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2204A2D81B52F9A90053F9E6 /* ParkLiveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2204A2EB1B52F9A90053F9E6 /* ParkLiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2D41B52F9A90053F9E6 /* ParkLiveKit.framework */; };
+		2204A2EC1B52F9A90053F9E6 /* ParkLiveKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2D41B52F9A90053F9E6 /* ParkLiveKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2204A2FE1B52F9F00053F9E6 /* SODAKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2204A2FD1B52F9F00053F9E6 /* SODAKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2204A3101B52F9F00053F9E6 /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */; };
+		2204A3111B52F9F00053F9E6 /* SODAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2204A2C01B52F88B0053F9E6 /* PBXContainerItemProxy */ = {
+		2204A2E91B52F9A90053F9E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2204A2A01B52F88B0053F9E6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2204A2A71B52F88B0053F9E6;
-			remoteInfo = ParkLive;
+			remoteGlobalIDString = 2204A2D31B52F9A90053F9E6;
+			remoteInfo = ParkLiveKit;
+		};
+		2204A30E1B52F9F00053F9E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2204A2A01B52F88B0053F9E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2204A2F81B52F9F00053F9E6;
+			remoteInfo = SODAKit;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2204A2F01B52F9AA0053F9E6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2204A3111B52F9F00053F9E6 /* SODAKit.framework in Embed Frameworks */,
+				2204A2EC1B52F9A90053F9E6 /* ParkLiveKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2204A2A81B52F88B0053F9E6 /* ParkLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,9 +62,12 @@
 		2204A2B41B52F88B0053F9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2204A2B61B52F88B0053F9E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2204A2B91B52F88B0053F9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2204A2BF1B52F88B0053F9E6 /* ParkLiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2204A2C41B52F88B0053F9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2204A2C51B52F88B0053F9E6 /* ParkLiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkLiveTests.swift; sourceTree = "<group>"; };
+		2204A2D41B52F9A90053F9E6 /* ParkLiveKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParkLiveKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2204A2D71B52F9A90053F9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2204A2D81B52F9A90053F9E6 /* ParkLiveKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParkLiveKit.h; sourceTree = "<group>"; };
+		2204A2F91B52F9F00053F9E6 /* SODAKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SODAKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2204A2FC1B52F9F00053F9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2204A2FD1B52F9F00053F9E6 /* SODAKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SODAKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,10 +75,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2204A3101B52F9F00053F9E6 /* SODAKit.framework in Frameworks */,
+				2204A2EB1B52F9A90053F9E6 /* ParkLiveKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2204A2BC1B52F88B0053F9E6 /* Frameworks */ = {
+		2204A2D01B52F9A90053F9E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2204A2F51B52F9F00053F9E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,7 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				2204A2AA1B52F88B0053F9E6 /* ParkLive */,
-				2204A2C21B52F88B0053F9E6 /* ParkLiveTests */,
+				2204A2D51B52F9A90053F9E6 /* ParkLiveKit */,
+				2204A2FA1B52F9F00053F9E6 /* SODAKit */,
 				2204A2A91B52F88B0053F9E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				2204A2A81B52F88B0053F9E6 /* ParkLive.app */,
-				2204A2BF1B52F88B0053F9E6 /* ParkLiveTests.xctest */,
+				2204A2D41B52F9A90053F9E6 /* ParkLiveKit.framework */,
+				2204A2F91B52F9F00053F9E6 /* SODAKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,24 +139,60 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2204A2C21B52F88B0053F9E6 /* ParkLiveTests */ = {
+		2204A2D51B52F9A90053F9E6 /* ParkLiveKit */ = {
 			isa = PBXGroup;
 			children = (
-				2204A2C51B52F88B0053F9E6 /* ParkLiveTests.swift */,
-				2204A2C31B52F88B0053F9E6 /* Supporting Files */,
+				2204A2D81B52F9A90053F9E6 /* ParkLiveKit.h */,
+				2204A2D61B52F9A90053F9E6 /* Supporting Files */,
 			);
-			path = ParkLiveTests;
+			path = ParkLiveKit;
 			sourceTree = "<group>";
 		};
-		2204A2C31B52F88B0053F9E6 /* Supporting Files */ = {
+		2204A2D61B52F9A90053F9E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2204A2C41B52F88B0053F9E6 /* Info.plist */,
+				2204A2D71B52F9A90053F9E6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2204A2FA1B52F9F00053F9E6 /* SODAKit */ = {
+			isa = PBXGroup;
+			children = (
+				2204A2FD1B52F9F00053F9E6 /* SODAKit.h */,
+				2204A2FB1B52F9F00053F9E6 /* Supporting Files */,
+			);
+			path = SODAKit;
+			sourceTree = "<group>";
+		};
+		2204A2FB1B52F9F00053F9E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2204A2FC1B52F9F00053F9E6 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2204A2D11B52F9A90053F9E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2204A2D91B52F9A90053F9E6 /* ParkLiveKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2204A2F61B52F9F00053F9E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2204A2FE1B52F9F00053F9E6 /* SODAKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2204A2A71B52F88B0053F9E6 /* ParkLive */ = {
@@ -125,33 +202,54 @@
 				2204A2A41B52F88B0053F9E6 /* Sources */,
 				2204A2A51B52F88B0053F9E6 /* Frameworks */,
 				2204A2A61B52F88B0053F9E6 /* Resources */,
+				2204A2F01B52F9AA0053F9E6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2204A2EA1B52F9A90053F9E6 /* PBXTargetDependency */,
+				2204A30F1B52F9F00053F9E6 /* PBXTargetDependency */,
 			);
 			name = ParkLive;
 			productName = ParkLive;
 			productReference = 2204A2A81B52F88B0053F9E6 /* ParkLive.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2204A2BE1B52F88B0053F9E6 /* ParkLiveTests */ = {
+		2204A2D31B52F9A90053F9E6 /* ParkLiveKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2204A2CC1B52F88B0053F9E6 /* Build configuration list for PBXNativeTarget "ParkLiveTests" */;
+			buildConfigurationList = 2204A2ED1B52F9AA0053F9E6 /* Build configuration list for PBXNativeTarget "ParkLiveKit" */;
 			buildPhases = (
-				2204A2BB1B52F88B0053F9E6 /* Sources */,
-				2204A2BC1B52F88B0053F9E6 /* Frameworks */,
-				2204A2BD1B52F88B0053F9E6 /* Resources */,
+				2204A2CF1B52F9A90053F9E6 /* Sources */,
+				2204A2D01B52F9A90053F9E6 /* Frameworks */,
+				2204A2D11B52F9A90053F9E6 /* Headers */,
+				2204A2D21B52F9A90053F9E6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2204A2C11B52F88B0053F9E6 /* PBXTargetDependency */,
 			);
-			name = ParkLiveTests;
-			productName = ParkLiveTests;
-			productReference = 2204A2BF1B52F88B0053F9E6 /* ParkLiveTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = ParkLiveKit;
+			productName = ParkLiveKit;
+			productReference = 2204A2D41B52F9A90053F9E6 /* ParkLiveKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2204A2F81B52F9F00053F9E6 /* SODAKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2204A3121B52F9F00053F9E6 /* Build configuration list for PBXNativeTarget "SODAKit" */;
+			buildPhases = (
+				2204A2F41B52F9F00053F9E6 /* Sources */,
+				2204A2F51B52F9F00053F9E6 /* Frameworks */,
+				2204A2F61B52F9F00053F9E6 /* Headers */,
+				2204A2F71B52F9F00053F9E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SODAKit;
+			productName = SODAKit;
+			productReference = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -165,9 +263,11 @@
 					2204A2A71B52F88B0053F9E6 = {
 						CreatedOnToolsVersion = 6.4;
 					};
-					2204A2BE1B52F88B0053F9E6 = {
+					2204A2D31B52F9A90053F9E6 = {
 						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 2204A2A71B52F88B0053F9E6;
+					};
+					2204A2F81B52F9F00053F9E6 = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -185,7 +285,8 @@
 			projectRoot = "";
 			targets = (
 				2204A2A71B52F88B0053F9E6 /* ParkLive */,
-				2204A2BE1B52F88B0053F9E6 /* ParkLiveTests */,
+				2204A2D31B52F9A90053F9E6 /* ParkLiveKit */,
+				2204A2F81B52F9F00053F9E6 /* SODAKit */,
 			);
 		};
 /* End PBXProject section */
@@ -201,7 +302,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2204A2BD1B52F88B0053F9E6 /* Resources */ = {
+		2204A2D21B52F9A90053F9E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2204A2F71B52F9F00053F9E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,21 +329,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2204A2BB1B52F88B0053F9E6 /* Sources */ = {
+		2204A2CF1B52F9A90053F9E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2204A2C61B52F88B0053F9E6 /* ParkLiveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2204A2F41B52F9F00053F9E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2204A2C11B52F88B0053F9E6 /* PBXTargetDependency */ = {
+		2204A2EA1B52F9A90053F9E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2204A2A71B52F88B0053F9E6 /* ParkLive */;
-			targetProxy = 2204A2C01B52F88B0053F9E6 /* PBXContainerItemProxy */;
+			target = 2204A2D31B52F9A90053F9E6 /* ParkLiveKit */;
+			targetProxy = 2204A2E91B52F9A90053F9E6 /* PBXContainerItemProxy */;
+		};
+		2204A30F1B52F9F00053F9E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2204A2F81B52F9F00053F9E6 /* SODAKit */;
+			targetProxy = 2204A30E1B52F9F00053F9E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -360,37 +479,87 @@
 			};
 			name = Release;
 		};
-		2204A2CD1B52F88B0053F9E6 /* Debug */ = {
+		2204A2EE1B52F9AA0053F9E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ParkLiveTests/Info.plist;
+				INFOPLIST_FILE = ParkLiveKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkLive.app/ParkLive";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		2204A2CE1B52F88B0053F9E6 /* Release */ = {
+		2204A2EF1B52F9AA0053F9E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ParkLiveTests/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ParkLiveKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkLive.app/ParkLive";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2204A3131B52F9F00053F9E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SODAKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2204A3141B52F9F00053F9E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SODAKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -414,11 +583,19 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		2204A2CC1B52F88B0053F9E6 /* Build configuration list for PBXNativeTarget "ParkLiveTests" */ = {
+		2204A2ED1B52F9AA0053F9E6 /* Build configuration list for PBXNativeTarget "ParkLiveKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2204A2CD1B52F88B0053F9E6 /* Debug */,
-				2204A2CE1B52F88B0053F9E6 /* Release */,
+				2204A2EE1B52F9AA0053F9E6 /* Debug */,
+				2204A2EF1B52F9AA0053F9E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2204A3121B52F9F00053F9E6 /* Build configuration list for PBXNativeTarget "SODAKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2204A3131B52F9F00053F9E6 /* Debug */,
+				2204A3141B52F9F00053F9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
