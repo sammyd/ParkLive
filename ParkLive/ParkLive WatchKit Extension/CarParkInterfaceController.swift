@@ -29,7 +29,6 @@ class CarParkInterfaceController: WKInterfaceController {
     }
   }
   
-  
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
     
@@ -42,6 +41,10 @@ class CarParkInterfaceController: WKInterfaceController {
   override func willActivate() {
     // This method is called when watch view controller is about to be visible to user
     super.willActivate()
+    if let carpark = carpark {
+      percentageRingGroup.startAnimatingWithImagesInRange(NSMakeRange(0,carpark.percentage),
+        duration: 1, repeatCount: 1)
+    }
   }
   
   override func didDeactivate() {
@@ -54,8 +57,9 @@ class CarParkInterfaceController: WKInterfaceController {
     nameLabel.setText(cp.name)
     statusLabel.setText("\(cp.status)")
     percentageLabel.setText("\(cp.percentage)%")
-    percentageRingGroup.setBackgroundImageNamed("parkring\(cp.percentage)")
-    println("parkring\(cp.percentage)")
+    percentageRingGroup.setBackgroundImageNamed("parkring")
+    // Will animate this in willActivate()
+    
     totalSpacesLabel.setText("\(cp.capacity)")
     freeSpacesLabel.setText("\(cp.capacity - cp.occupancy) Free")
     
