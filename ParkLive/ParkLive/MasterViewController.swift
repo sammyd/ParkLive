@@ -41,6 +41,11 @@ class MasterViewController: UITableViewController {
       name: UIApplicationDidBecomeActiveNotification, object: nil)
   }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    addCellDeselectionAnimation()
+  }
+  
   deinit {
     NSNotificationCenter.defaultCenter().removeObserver(self)
   }
@@ -101,5 +106,31 @@ class MasterViewController: UITableViewController {
     }
   }
   
+  private func addCellDeselectionAnimation() {
+    let indexPath = tableView.indexPathForSelectedRow()
+    
+    if let indexPath = indexPath,
+      let cell = tableView.cellForRowAtIndexPath(indexPath) {
+        // In this case, I am appearing, but am already in a parent view controller
+        if let transitionCoordinator = transitionCoordinator()
+          where transitionCoordinator.initiallyInteractive()
+            && !isBeingPresented()
+            && !isMovingToParentViewController() {
+              transitionCoordinator.animateAlongsideTransition({ _ in
+                cell.setSelected(false, animated: true)
+                }, completion: { context in
+                  if context.isCancelled() {
+                    // Reverse the cell selection process
+                    cell.setSelected(true, animated: false)
+                  } else {
+                    // Tell the table about the selection
+                    self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
+                  }
+              })
+        } else {
+          self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    }
+  }
 }
 
