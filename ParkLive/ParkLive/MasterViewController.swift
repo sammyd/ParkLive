@@ -23,7 +23,7 @@ class MasterViewController: UITableViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     tableView.rowHeight = UITableViewAutomaticDimension
-    tableView.estimatedRowHeight = 70
+    tableView.estimatedRowHeight = 86
     
     getCarParkData {
       carparkData in
