@@ -16,7 +16,7 @@ public enum ParkLiveData {
 public func getCarParkData(callback: (ParkLiveData) -> ()) {
   let client = SODAClient(domain: "data.bathhacked.org", token: "d1TbPXUzf0zqTuCy6MDCTtJR6")
   let query = client.queryDataset("u3w2-9yme")
-  query.orderDescending("percentage").get {
+  query.orderAscending("percentage").get {
     results in
     switch(results) {
     case .Dataset(let dataset):
