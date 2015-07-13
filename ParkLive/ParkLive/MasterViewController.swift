@@ -13,8 +13,12 @@ class MasterViewController: UITableViewController {
   
   private var carparks : [CarPark]? {
     didSet {
-      if carparks != nil {
-        tableView.reloadData()
+      if let carparks = carparks {
+        if let oldValue = oldValue where oldValue.count == carparks.count {
+          tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Fade)
+        } else {
+          tableView.reloadData()
+        }
       }
     }
   }
@@ -25,15 +29,20 @@ class MasterViewController: UITableViewController {
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 86
     
-    getCarParkData {
-      carparkData in
-      switch carparkData {
-      case .Result(let carparks):
-        self.carparks = carparks
-      case .Error(let error):
-        println(error)
-      }
-    }
+    // Prepare the refresh control
+    refreshControl = UIRefreshControl()
+    refreshControl?.addTarget(self, action: "refreshTableData", forControlEvents: .ValueChanged)
+    
+    // Load the table data
+    automaticRefreshTableData()
+    
+    // Add a listener to refresh the data when the app hits the foreground
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "automaticRefreshTableData",
+      name: UIApplicationDidBecomeActiveNotification, object: nil)
+  }
+  
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self)
   }
   
   
@@ -64,6 +73,31 @@ class MasterViewController: UITableViewController {
         return cell
     } else {
       return UITableViewCell()
+    }
+  }
+  
+  // MARK: - Utils
+  func automaticRefreshTableData() {
+    refreshControl?.beginRefreshing()
+    refreshTableData()
+  }
+  
+  func refreshTableData() {
+    loadTableData() {
+      self.refreshControl?.endRefreshing()
+    }
+  }
+  
+  private func loadTableData(completionHandler: (() -> ())) {
+    getCarParkData {
+      carparkData in
+      switch carparkData {
+      case .Result(let carparks):
+        self.carparks = carparks
+      case .Error(let error):
+        println(error)
+      }
+      completionHandler()
     }
   }
   
