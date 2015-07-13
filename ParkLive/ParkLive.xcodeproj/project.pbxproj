@@ -123,6 +123,7 @@
 		2204A3451B53013A0053F9E6 /* CarParkInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkInterfaceController.swift; sourceTree = "<group>"; };
 		2204A3491B5303270053F9E6 /* CarParkRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkRow.swift; sourceTree = "<group>"; };
 		22BA88EA1B5313A400C8A5BD /* ParkLiveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkLiveData.swift; sourceTree = "<group>"; };
+		22BA88EC1B539BAD00C8A5BD /* ImageAttribution.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ImageAttribution.txt; sourceTree = "<group>"; };
 		22DD50E91B5309FC00505597 /* CircularView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
 		22DD50ED1B530C5B00505597 /* CarParkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -305,6 +306,7 @@
 			children = (
 				2204A2D51B52F9A90053F9E6 /* ParkLiveKit */,
 				2204A2FA1B52F9F00053F9E6 /* SODAKit */,
+				22BA88EC1B539BAD00C8A5BD /* ImageAttribution.txt */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
