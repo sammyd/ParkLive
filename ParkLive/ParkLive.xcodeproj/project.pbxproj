@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		22BA88F91B53A6E300C8A5BD /* IncrementBuildNumber */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 22BA88FA1B53A6E300C8A5BD /* Build configuration list for PBXAggregateTarget "IncrementBuildNumber" */;
+			buildPhases = (
+				22BA88FD1B53A6E700C8A5BD /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = IncrementBuildNumber;
+			productName = IncrementBuildNumber;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2204A2AE1B52F88B0053F9E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A2AD1B52F88B0053F9E6 /* AppDelegate.swift */; };
 		2204A2B01B52F88B0053F9E6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A2AF1B52F88B0053F9E6 /* MasterViewController.swift */; };
@@ -33,6 +47,7 @@
 		2204A3481B5301510053F9E6 /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */; };
 		2204A34A1B5303270053F9E6 /* CarParkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A3491B5303270053F9E6 /* CarParkRow.swift */; };
 		22BA88EB1B5313A400C8A5BD /* ParkLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA88EA1B5313A400C8A5BD /* ParkLiveData.swift */; };
+		22BA88F01B53A5DC00C8A5BD /* version.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22BA88EF1B53A5DC00C8A5BD /* version.txt */; };
 		22DD50EA1B5309FC00505597 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD50E91B5309FC00505597 /* CircularView.swift */; };
 		22DD50EE1B530C5B00505597 /* CarParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD50ED1B530C5B00505597 /* CarParkTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -131,6 +146,7 @@
 		2204A3491B5303270053F9E6 /* CarParkRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkRow.swift; sourceTree = "<group>"; };
 		22BA88EA1B5313A400C8A5BD /* ParkLiveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkLiveData.swift; sourceTree = "<group>"; };
 		22BA88EC1B539BAD00C8A5BD /* ImageAttribution.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ImageAttribution.txt; sourceTree = "<group>"; };
+		22BA88EF1B53A5DC00C8A5BD /* version.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = version.txt; sourceTree = "<group>"; };
 		22DD50E91B5309FC00505597 /* CircularView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
 		22DD50ED1B530C5B00505597 /* CarParkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +190,7 @@
 		2204A29F1B52F88B0053F9E6 = {
 			isa = PBXGroup;
 			children = (
+				22BA88EF1B53A5DC00C8A5BD /* version.txt */,
 				2204A3441B52FE250053F9E6 /* Utils */,
 				2204A3431B52FE1D0053F9E6 /* watchOS */,
 				2204A3421B52FE170053F9E6 /* iOS */,
@@ -476,6 +493,9 @@
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = D23W9URMHY;
 					};
+					22BA88F91B53A6E300C8A5BD = {
+						CreatedOnToolsVersion = 6.4;
+					};
 				};
 			};
 			buildConfigurationList = 2204A2A31B52F88B0053F9E6 /* Build configuration list for PBXProject "ParkLive" */;
@@ -496,6 +516,7 @@
 				2204A2F81B52F9F00053F9E6 /* SODAKit */,
 				2204A3211B52FDE70053F9E6 /* ParkLive WatchKit Extension */,
 				2204A32B1B52FDE70053F9E6 /* ParkLive WatchKit App */,
+				22BA88F91B53A6E300C8A5BD /* IncrementBuildNumber */,
 			);
 		};
 /* End PBXProject section */
@@ -515,6 +536,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BA88F01B53A5DC00C8A5BD /* version.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +566,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22BA88FD1B53A6E700C8A5BD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env bash";
+			shellScript = "#read vesion number from version.txt in project root\nVERSION=$(head -n 1 version.txt)\n#BUILD=`git rev-list $(git rev-parse --abbrev-ref HEAD) | wc -l | awk '{ print $1 }'`\nBUILD=`git rev-parse --short  HEAD`\n\necho \"${VERSION} (${BUILD})\"\n\nagvtool new-marketing-version ${VERSION}\nagvtool new-version -all ${BUILD}\n\nexit 0";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2204A2A41B52F88B0053F9E6 /* Sources */ = {
@@ -732,6 +770,7 @@
 				INFOPLIST_FILE = ParkLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -742,6 +781,7 @@
 				INFOPLIST_FILE = ParkLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -750,10 +790,10 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = df911f1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = df911f1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -776,10 +816,10 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = df911f1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = df911f1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ParkLiveKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -797,10 +837,10 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = df911f1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = df911f1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -823,10 +863,10 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = df911f1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = df911f1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SODAKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -857,6 +897,7 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -874,6 +915,7 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -888,6 +930,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -898,6 +941,21 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		22BA88FB1B53A6E300C8A5BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22BA88FC1B53A6E300C8A5BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -954,6 +1012,15 @@
 			buildConfigurations = (
 				2204A33F1B52FDE70053F9E6 /* Debug */,
 				2204A3401B52FDE70053F9E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22BA88FA1B53A6E300C8A5BD /* Build configuration list for PBXAggregateTarget "IncrementBuildNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22BA88FB1B53A6E300C8A5BD /* Debug */,
+				22BA88FC1B53A6E300C8A5BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
