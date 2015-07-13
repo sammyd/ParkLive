@@ -36,6 +36,15 @@
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="SKL-XG-QFG">
+                        <items>
+                            <menuItem title="Refresh" icon="resume" id="idT-jh-mja">
+                                <connections>
+                                    <action selector="handleRefresh" destination="AgC-eL-Hgc" id="BEB-6F-kd0"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="carparkTable" destination="OJ9-1J-og7" id="tHK-JE-iEF"/>
                     </connections>

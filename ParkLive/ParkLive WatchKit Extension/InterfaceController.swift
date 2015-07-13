@@ -21,6 +21,7 @@ class CarParkControllerContext {
 class InterfaceController: WKInterfaceController {
   
   @IBOutlet var carparkTable: WKInterfaceTable!
+  var refreshTimer: NSTimer?
   
   var carparks : [CarPark]? {
     didSet {
@@ -34,25 +35,21 @@ class InterfaceController: WKInterfaceController {
     super.awakeWithContext(context)
     
     // Configure interface objects here.
-    getCarParkData {
-      carparkData in
-      switch carparkData {
-      case .Result(let carparks):
-        self.carparks = carparks
-      case .Error(let error):
-        println(error)
-      }
-    }
+    loadTableData()
   }
   
   override func willActivate() {
     // This method is called when watch view controller is about to be visible to user
     super.willActivate()
+    refreshTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self,
+      selector: "handleRefresh", userInfo: nil, repeats: true)
   }
   
   override func didDeactivate() {
     // This method is called when watch view controller is no longer visible
     super.didDeactivate()
+    refreshTimer?.invalidate()
+    refreshTimer = nil
   }
   
   
@@ -63,6 +60,22 @@ class InterfaceController: WKInterfaceController {
     return CarParkControllerContext(carpark: carpark)
     } else {
       return nil
+    }
+  }
+  
+  @IBAction func handleRefresh() {
+    loadTableData()
+  }
+  
+  private func loadTableData() {
+    getCarParkData {
+      carparkData in
+      switch carparkData {
+      case .Result(let carparks):
+        self.carparks = carparks
+      case .Error(let error):
+        println(error)
+      }
     }
   }
   
