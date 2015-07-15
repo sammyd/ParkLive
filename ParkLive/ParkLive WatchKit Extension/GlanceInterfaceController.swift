@@ -38,19 +38,20 @@ class GlanceInterfaceController: WKInterfaceController {
     }
   }
   
+  private var updateTimer : NSTimer?
+  
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
     
     // Configure interface objects here.
-    getCarParkData {
-      data in
-      switch data {
-      case .Error(let error):
-        println("Error: \(error.localizedDescription)")
-      case .Result(let carparks):
-        self.processNewCarParkData(carparks)
-      }
-    }
+    updateData()
+    updateTimer = NSTimer.scheduledTimerWithTimeInterval(30, target: self,
+      selector: "updateData", userInfo: nil, repeats: true)
+  }
+  
+  deinit {
+    updateTimer?.invalidate()
+    updateTimer = nil
   }
   
   override func willActivate() {
@@ -61,6 +62,18 @@ class GlanceInterfaceController: WKInterfaceController {
   override func didDeactivate() {
     // This method is called when watch view controller is no longer visible
     super.didDeactivate()
+  }
+  
+  func updateData() {
+    getCarParkData {
+      data in
+      switch data {
+      case .Error(let error):
+        println("Error: \(error.localizedDescription)")
+      case .Result(let carparks):
+        self.processNewCarParkData(carparks)
+      }
+    }
   }
   
   private func processNewCarParkData(carparks: [CarPark]) {

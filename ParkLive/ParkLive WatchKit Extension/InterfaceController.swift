@@ -36,22 +36,24 @@ class InterfaceController: WKInterfaceController {
     
     // Configure interface objects here.
     loadTableData()
+    refreshTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self,
+      selector: "handleRefresh", userInfo: nil, repeats: true)
   }
   
   override func willActivate() {
     // This method is called when watch view controller is about to be visible to user
     super.willActivate()
-    refreshTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self,
-      selector: "handleRefresh", userInfo: nil, repeats: true)
   }
   
   override func didDeactivate() {
     // This method is called when watch view controller is no longer visible
     super.didDeactivate()
+  }
+  
+  deinit {
     refreshTimer?.invalidate()
     refreshTimer = nil
   }
-  
   
   override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
     if let carparks = carparks {
