@@ -47,6 +47,7 @@
 		2204A3481B5301510053F9E6 /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */; };
 		2204A34A1B5303270053F9E6 /* CarParkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A3491B5303270053F9E6 /* CarParkRow.swift */; };
 		2229301B1B559AE70045D30F /* GlanceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229301A1B559AE70045D30F /* GlanceInterfaceController.swift */; };
+		2260ADF71B57074B003C0EF7 /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2260ADF61B57074B003C0EF7 /* Settings-Watch.bundle */; };
 		22BA88EB1B5313A400C8A5BD /* ParkLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA88EA1B5313A400C8A5BD /* ParkLiveData.swift */; };
 		22BA88F01B53A5DC00C8A5BD /* version.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22BA88EF1B53A5DC00C8A5BD /* version.txt */; };
 		22DD50EA1B5309FC00505597 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD50E91B5309FC00505597 /* CircularView.swift */; };
@@ -146,6 +147,7 @@
 		2204A3451B53013A0053F9E6 /* CarParkInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkInterfaceController.swift; sourceTree = "<group>"; };
 		2204A3491B5303270053F9E6 /* CarParkRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkRow.swift; sourceTree = "<group>"; };
 		2229301A1B559AE70045D30F /* GlanceInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceInterfaceController.swift; sourceTree = "<group>"; };
+		2260ADF61B57074B003C0EF7 /* Settings-Watch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "Settings-Watch.bundle"; path = "ParkLive WatchKit App/Settings-Watch.bundle"; sourceTree = "<group>"; };
 		22BA88EA1B5313A400C8A5BD /* ParkLiveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkLiveData.swift; sourceTree = "<group>"; };
 		22BA88EC1B539BAD00C8A5BD /* ImageAttribution.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ImageAttribution.txt; sourceTree = "<group>"; };
 		22BA88EF1B53A5DC00C8A5BD /* version.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = version.txt; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 		2204A3431B52FE1D0053F9E6 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
+				2260ADF61B57074B003C0EF7 /* Settings-Watch.bundle */,
 				2204A3301B52FDE70053F9E6 /* ParkLive WatchKit App */,
 				2204A3231B52FDE70053F9E6 /* ParkLive WatchKit Extension */,
 			);
@@ -531,6 +534,7 @@
 			files = (
 				2204A2B51B52F88B0053F9E6 /* Main.storyboard in Resources */,
 				2204A2BA1B52F88B0053F9E6 /* LaunchScreen.xib in Resources */,
+				2260ADF71B57074B003C0EF7 /* Settings-Watch.bundle in Resources */,
 				2204A2B71B52F88B0053F9E6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
