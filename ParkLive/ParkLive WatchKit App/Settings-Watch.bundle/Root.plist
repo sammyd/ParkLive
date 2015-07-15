@@ -30,7 +30,7 @@
 			<key>Title</key>
 			<string>Favourite Car Park</string>
 			<key>Key</key>
-			<string>favourite</string>
+			<string>favourite_carpark</string>
 			<key>DefaultValue</key>
 			<string></string>
 			<key>Values</key>

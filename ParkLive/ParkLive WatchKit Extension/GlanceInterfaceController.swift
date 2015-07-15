@@ -78,8 +78,18 @@ class GlanceInterfaceController: WKInterfaceController {
   
   private func processNewCarParkData(carparks: [CarPark]) {
     // Load the settings
-    
-    
+    if let settings = NSUserDefaults(suiteName: "group.visualputty.ParkLive"),
+      let favouriteCarPark = settings.stringForKey("favourite_carpark")
+      where settings.boolForKey("display_favourite") {
+        // Does the favourite car park actually exist?
+        let favCP = carparks.filter { $0.name == favouriteCarPark }
+        if favCP.count == 1 {
+          primaryCarPark = favCP.first
+          supplementaryCarParks = Array(carparks.filter { $0.name != favouriteCarPark }[0...2])
+          return
+        }
+    }
+
     primaryCarPark = carparks.first
     if carparks.count >= 4 {
       supplementaryCarParks = Array(carparks[1...3])
