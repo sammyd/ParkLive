@@ -66,16 +66,20 @@
                         </group>
                         <group alignment="left" layout="vertical" id="4Xh-Vo-Tjk">
                             <items>
-                                <group alignment="center" id="eHt-uk-UIs" userLabel="Container">
+                                <group alignment="center" spacing="5" id="eHt-uk-UIs" userLabel="Container">
                                     <items>
                                         <group width="1" alignment="left" layout="vertical" spacing="0.0" id="TyO-25-zwe" userLabel="Primary Car Park">
                                             <items>
                                                 <group width="90" height="90" alignment="center" backgroundImage="largering_0" contentMode="scaleAspectFit" id="ABM-xf-neG" userLabel="Primary Ring">
                                                     <items>
-                                                        <label alignment="center" verticalAlignment="center" text="-" id="dor-0B-azF" userLabel="Primary Percentage">
+                                                        <label alignment="center" verticalAlignment="center" text="88%" id="dor-0B-azF" userLabel="Primary Percentage">
                                                             <fontDescription key="font" type="system" weight="light" pointSize="28"/>
+                                                            <variation key="device=watch42mm" text="88%">
+                                                                <fontDescription key="font" type="system" weight="light" pointSize="30"/>
+                                                            </variation>
                                                         </label>
                                                     </items>
+                                                    <variation key="device=watch42mm" height="102" width="102"/>
                                                 </group>
                                                 <label alignment="center" text="- / - free" id="Ylb-Qm-IXb">
                                                     <fontDescription key="font" type="system" weight="semibold" pointSize="11"/>
@@ -109,6 +113,7 @@
                                                     <color key="backgroundColor" red="0.72941176470000002" green="0.2666666667" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 </group>
                                             </items>
+                                            <variation key="device=watch42mm" spacing="11"/>
                                         </group>
                                     </items>
                                 </group>
@@ -129,7 +134,7 @@
                     </connections>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="207" y="705"/>
+            <point key="canvasLocation" x="206.61538461538464" y="704.84615384615392"/>
         </scene>
         <!--ParkLive-->
         <scene sceneID="Mai-Zu-LhY">
