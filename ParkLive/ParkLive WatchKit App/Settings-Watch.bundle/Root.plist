@@ -56,6 +56,6 @@
 		</dict>
 	</array>
 	<key>ApplicationGroupContainerIdentifier</key>
-	<string></string>
+	<string>group.visualputty.ParkLive</string>
 </dict>
 </plist>

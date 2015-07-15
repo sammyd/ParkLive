@@ -77,6 +77,9 @@ class GlanceInterfaceController: WKInterfaceController {
   }
   
   private func processNewCarParkData(carparks: [CarPark]) {
+    // Load the settings
+    
+    
     primaryCarPark = carparks.first
     if carparks.count >= 4 {
       supplementaryCarParks = Array(carparks[1...3])
