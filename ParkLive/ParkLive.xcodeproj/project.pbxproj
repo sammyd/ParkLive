@@ -46,6 +46,7 @@
 		2204A3471B5301510053F9E6 /* ParkLiveKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2D41B52F9A90053F9E6 /* ParkLiveKit.framework */; };
 		2204A3481B5301510053F9E6 /* SODAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2204A2F91B52F9F00053F9E6 /* SODAKit.framework */; };
 		2204A34A1B5303270053F9E6 /* CarParkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204A3491B5303270053F9E6 /* CarParkRow.swift */; };
+		2229301B1B559AE70045D30F /* GlanceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229301A1B559AE70045D30F /* GlanceInterfaceController.swift */; };
 		22BA88EB1B5313A400C8A5BD /* ParkLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA88EA1B5313A400C8A5BD /* ParkLiveData.swift */; };
 		22BA88F01B53A5DC00C8A5BD /* version.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22BA88EF1B53A5DC00C8A5BD /* version.txt */; };
 		22DD50EA1B5309FC00505597 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD50E91B5309FC00505597 /* CircularView.swift */; };
@@ -144,6 +145,7 @@
 		2204A3361B52FDE70053F9E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2204A3451B53013A0053F9E6 /* CarParkInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkInterfaceController.swift; sourceTree = "<group>"; };
 		2204A3491B5303270053F9E6 /* CarParkRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarParkRow.swift; sourceTree = "<group>"; };
+		2229301A1B559AE70045D30F /* GlanceInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceInterfaceController.swift; sourceTree = "<group>"; };
 		22BA88EA1B5313A400C8A5BD /* ParkLiveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkLiveData.swift; sourceTree = "<group>"; };
 		22BA88EC1B539BAD00C8A5BD /* ImageAttribution.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ImageAttribution.txt; sourceTree = "<group>"; };
 		22BA88EF1B53A5DC00C8A5BD /* version.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = version.txt; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				2204A3261B52FDE70053F9E6 /* InterfaceController.swift */,
+				2229301A1B559AE70045D30F /* GlanceInterfaceController.swift */,
 				2204A3451B53013A0053F9E6 /* CarParkInterfaceController.swift */,
 				2204A3491B5303270053F9E6 /* CarParkRow.swift */,
 				2204A3281B52FDE70053F9E6 /* Images.xcassets */,
@@ -619,6 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2204A3461B53013A0053F9E6 /* CarParkInterfaceController.swift in Sources */,
+				2229301B1B559AE70045D30F /* GlanceInterfaceController.swift in Sources */,
 				2204A34A1B5303270053F9E6 /* CarParkRow.swift in Sources */,
 				2204A3271B52FDE70053F9E6 /* InterfaceController.swift in Sources */,
 			);

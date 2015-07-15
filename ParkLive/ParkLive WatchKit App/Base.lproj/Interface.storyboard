@@ -52,6 +52,85 @@
             </objects>
             <point key="canvasLocation" x="207" y="337"/>
         </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="wLM-Dh-FH5">
+            <objects>
+                <glanceController id="MGq-x8-ocw" customClass="GlanceInterfaceController" customModule="ParkLive_WatchKit_Extension">
+                    <items>
+                        <group alignment="left" layout="vertical" id="eSb-Hz-4MJ">
+                            <items>
+                                <label width="107" alignment="left" numberOfLines="2" id="rrS-N9-K28">
+                                    <fontDescription key="font" type="system" pointSize="21"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="4Xh-Vo-Tjk">
+                            <items>
+                                <group alignment="center" id="eHt-uk-UIs" userLabel="Container">
+                                    <items>
+                                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="TyO-25-zwe" userLabel="Primary Car Park">
+                                            <items>
+                                                <group width="90" height="90" alignment="center" backgroundImage="largering_0" contentMode="scaleAspectFit" id="ABM-xf-neG" userLabel="Primary Ring">
+                                                    <items>
+                                                        <label alignment="center" verticalAlignment="center" text="-" id="dor-0B-azF" userLabel="Primary Percentage">
+                                                            <fontDescription key="font" type="system" weight="light" pointSize="28"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                                <label alignment="center" text="- / - free" id="Ylb-Qm-IXb">
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="11"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group alignment="center" layout="vertical" spacing="5" id="Gv8-jx-KVH" userLabel="Supplementary">
+                                            <items>
+                                                <group width="30" height="30" alignment="left" radius="15" id="Use-nV-IMz" userLabel="Circle1">
+                                                    <items>
+                                                        <label alignment="center" verticalAlignment="center" text="-" id="u6B-xW-L4w" userLabel="CP1 %age">
+                                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                        </label>
+                                                    </items>
+                                                    <color key="backgroundColor" red="0.72941176470000002" green="0.2666666667" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                </group>
+                                                <group width="30" height="30" alignment="left" radius="15" id="PSH-LA-zGq" userLabel="Circle2">
+                                                    <items>
+                                                        <label alignment="center" verticalAlignment="center" text="-" id="2Rd-iM-uK8" userLabel="CP2 %age">
+                                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                        </label>
+                                                    </items>
+                                                    <color key="backgroundColor" red="0.72941176470000002" green="0.2666666667" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                </group>
+                                                <group width="30" height="30" alignment="left" radius="15" id="XuB-Vb-wET" userLabel="Circle3">
+                                                    <items>
+                                                        <label alignment="center" verticalAlignment="center" text="-" id="BvF-ZW-Zsd" userLabel="CP3 %age">
+                                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                        </label>
+                                                    </items>
+                                                    <color key="backgroundColor" red="0.72941176470000002" green="0.2666666667" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                </group>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="detailsLabel" destination="Ylb-Qm-IXb" id="x0V-eL-IdX"/>
+                        <outlet property="nameLabel" destination="rrS-N9-K28" id="aB4-78-rCR"/>
+                        <outlet property="primaryPCBackground" destination="ABM-xf-neG" id="s7C-2v-eCH"/>
+                        <outlet property="primaryPCLabel" destination="dor-0B-azF" id="SDD-ba-eTW"/>
+                        <outlet property="smallPCBackground1" destination="Use-nV-IMz" id="nYD-rS-ycv"/>
+                        <outlet property="smallPCBackground2" destination="PSH-LA-zGq" id="mAU-8e-c4f"/>
+                        <outlet property="smallPCBackground3" destination="XuB-Vb-wET" id="WOs-ZL-GMD"/>
+                        <outlet property="smallPCLabel1" destination="u6B-xW-L4w" id="fWz-Wm-dMm"/>
+                        <outlet property="smallPCLabel2" destination="2Rd-iM-uK8" id="YcM-1v-Iwh"/>
+                        <outlet property="smallPCLabel3" destination="BvF-ZW-Zsd" id="Vfq-pX-eir"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="207" y="705"/>
+        </scene>
         <!--ParkLive-->
         <scene sceneID="Mai-Zu-LhY">
             <objects>
@@ -99,7 +178,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="477" y="337"/>
+            <point key="canvasLocation" x="478" y="336.75"/>
         </scene>
     </scenes>
 </document>
