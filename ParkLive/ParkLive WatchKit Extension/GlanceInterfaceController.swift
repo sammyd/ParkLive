@@ -15,14 +15,11 @@ class GlanceInterfaceController: WKInterfaceController {
 
   @IBOutlet weak var nameLabel: WKInterfaceLabel!
   @IBOutlet weak var primaryPCLabel: WKInterfaceLabel!
-  @IBOutlet weak var smallPCLabel1: WKInterfaceLabel!
-  @IBOutlet weak var smallPCLabel2: WKInterfaceLabel!
-  @IBOutlet weak var smallPCLabel3: WKInterfaceLabel!
   @IBOutlet weak var primaryPCBackground: WKInterfaceGroup!
-  @IBOutlet weak var smallPCBackground1: WKInterfaceGroup!
-  @IBOutlet weak var smallPCBackground2: WKInterfaceGroup!
-  @IBOutlet weak var smallPCBackground3: WKInterfaceGroup!
+  @IBOutlet weak var cityPCLabel: WKInterfaceLabel!
+  @IBOutlet weak var cityPCBackground: WKInterfaceGroup!
   @IBOutlet weak var detailsLabel: WKInterfaceLabel!
+  @IBOutlet weak var citySpacesLabel: WKInterfaceLabel!
   
   private var primaryCarPark : CarPark? {
     didSet {
@@ -32,9 +29,9 @@ class GlanceInterfaceController: WKInterfaceController {
     }
   }
   
-  private var supplementaryCarParks : [CarPark] = [CarPark]() {
+  private var allCarParks : [CarPark] = [CarPark]() {
     didSet {
-      applySupplementaryCarParks(supplementaryCarParks)
+      applyCitywideInfo(allCarParks)
     }
   }
   
@@ -74,6 +71,8 @@ class GlanceInterfaceController: WKInterfaceController {
   }
   
   private func processNewCarParkData(carparks: [CarPark]) {
+    allCarParks = carparks
+    
     // Load the settings
     if let settings = NSUserDefaults(suiteName: "group.visualputty.ParkLive"),
       let favouriteCarPark = settings.stringForKey("favourite_carpark")
@@ -82,15 +81,12 @@ class GlanceInterfaceController: WKInterfaceController {
         let favCP = carparks.filter { $0.name == favouriteCarPark }
         if favCP.count == 1 {
           primaryCarPark = favCP.first
-          supplementaryCarParks = Array(carparks.filter { $0.name != favouriteCarPark }[0...2])
           return
         }
     }
-
+    
+    // Fall over if no default set
     primaryCarPark = carparks.first
-    if carparks.count >= 4 {
-      supplementaryCarParks = Array(carparks[1...3])
-    }
   }
   
   private func applyPrimaryCarPark(carpark: CarPark) {
@@ -107,19 +103,15 @@ class GlanceInterfaceController: WKInterfaceController {
     detailsLabel.setText("\(freeSpaces) / \(carpark.capacity) free")
   }
   
-  private func applySupplementaryCarParks(carparks: [CarPark]) {
-    // Early exit if not enough car parks
-    if carparks.count != 3 { return }
+  private func applyCitywideInfo(carparks: [CarPark]) {
+    let totalSpaces = carparks.reduce(0) { $0 + $1.capacity }
+    let totalOccupied = carparks.reduce(0) { $0 + $1.occupancy }
+    let totalFree = totalSpaces - totalOccupied
+    let percentage = 100 * totalOccupied / totalSpaces
     
-    // Deal with background colours
-    for (carpark, background) in zip(carparks, [smallPCBackground1, smallPCBackground2, smallPCBackground3]) {
-      background.setBackgroundColor(UIColor.plColourForPercentage(carpark.percentage))
-    }
-    
-    // And now the percentage labels
-    for (carpark, label) in zip(carparks, [smallPCLabel1, smallPCLabel2, smallPCLabel3]) {
-      label.setText("\(carpark.percentage)%")
-    }
+    cityPCLabel.setText("\(percentage)%")
+    cityPCBackground.setBackgroundColor(UIColor.plColourForPercentage(percentage))
+    citySpacesLabel.setText("\(totalFree) free")
   }
   
 }
