@@ -50,11 +50,14 @@ class GlanceInterfaceController: WKInterfaceController {
     if let lastUpdated = lastUpdated where NSDate().timeIntervalSinceDate(lastUpdated) > 60 {
       updateData()
     }
+    
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "updatePrimaryCarPark", name: NSUserDefaultsDidChangeNotification, object: nil)
   }
   
   override func didDeactivate() {
     // This method is called when watch view controller is no longer visible
     super.didDeactivate()
+    NSNotificationCenter.defaultCenter().removeObserver(self)
   }
   
   func updateData() {
@@ -70,23 +73,27 @@ class GlanceInterfaceController: WKInterfaceController {
     }
   }
   
-  private func processNewCarParkData(carparks: [CarPark]) {
-    allCarParks = carparks
-    
+  func updatePrimaryCarPark() {
+    primaryCarPark = findPrimaryCarPark()
+  }
+  
+  private func findPrimaryCarPark() -> CarPark {
     // Load the settings
     if let settings = NSUserDefaults(suiteName: "group.visualputty.ParkLive"),
       let favouriteCarPark = settings.stringForKey("favourite_carpark")
       where settings.boolForKey("display_favourite") {
         // Does the favourite car park actually exist?
-        let favCP = carparks.filter { $0.name == favouriteCarPark }
+        let favCP = allCarParks.filter { $0.name == favouriteCarPark }
         if favCP.count == 1 {
-          primaryCarPark = favCP.first
-          return
+          return favCP.first!
         }
     }
-    
-    // Fall over if no default set
-    primaryCarPark = carparks.first
+    return allCarParks.first!
+  }
+  
+  private func processNewCarParkData(carparks: [CarPark]) {
+    allCarParks = carparks
+    updatePrimaryCarPark()
   }
   
   private func applyPrimaryCarPark(carpark: CarPark) {
