@@ -21,10 +21,11 @@ class CarParkControllerContext {
 class InterfaceController: WKInterfaceController {
   
   @IBOutlet var carparkTable: WKInterfaceTable!
-  var refreshTimer: NSTimer?
+  var lastUpdated: NSDate?
   
   var carparks : [CarPark]? {
     didSet {
+      lastUpdated = NSDate()
       if let carparks = carparks {
         configureTableWithData(carparks)
       }
@@ -33,26 +34,21 @@ class InterfaceController: WKInterfaceController {
   
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
-    
     // Configure interface objects here.
     loadTableData()
-    refreshTimer = NSTimer.scheduledTimerWithTimeInterval(60, target: self,
-      selector: "handleRefresh", userInfo: nil, repeats: true)
   }
   
   override func willActivate() {
     // This method is called when watch view controller is about to be visible to user
     super.willActivate()
+    if let lastUpdated = lastUpdated where NSDate().timeIntervalSinceDate(lastUpdated) > 60 {
+      loadTableData()
+    }
   }
   
   override func didDeactivate() {
     // This method is called when watch view controller is no longer visible
     super.didDeactivate()
-  }
-  
-  deinit {
-    refreshTimer?.invalidate()
-    refreshTimer = nil
   }
   
   override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
@@ -90,5 +86,4 @@ class InterfaceController: WKInterfaceController {
       }
     }
   }
-  
 }

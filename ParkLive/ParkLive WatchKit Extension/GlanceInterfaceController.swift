@@ -38,25 +38,21 @@ class GlanceInterfaceController: WKInterfaceController {
     }
   }
   
-  private var updateTimer : NSTimer?
+  private var lastUpdated : NSDate?
   
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
     
     // Configure interface objects here.
     updateData()
-    updateTimer = NSTimer.scheduledTimerWithTimeInterval(30, target: self,
-      selector: "updateData", userInfo: nil, repeats: true)
   }
-  
-  deinit {
-    updateTimer?.invalidate()
-    updateTimer = nil
-  }
-  
+
   override func willActivate() {
     // This method is called when watch view controller is about to be visible to user
     super.willActivate()
+    if let lastUpdated = lastUpdated where NSDate().timeIntervalSinceDate(lastUpdated) > 60 {
+      updateData()
+    }
   }
   
   override func didDeactivate() {
@@ -71,6 +67,7 @@ class GlanceInterfaceController: WKInterfaceController {
       case .Error(let error):
         println("Error: \(error.localizedDescription)")
       case .Result(let carparks):
+        self.lastUpdated = NSDate()
         self.processNewCarParkData(carparks)
       }
     }
