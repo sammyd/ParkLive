@@ -17,7 +17,7 @@
                                         <items>
                                             <group width="34" height="34" alignment="left" verticalAlignment="center" radius="17" id="d1l-Md-mWV" userLabel="Space Group">
                                                 <items>
-                                                    <label alignment="center" verticalAlignment="center" text="123" minimumScaleFactor="0.80000000000000004" id="o7O-ww-Fs5"/>
+                                                    <label alignment="center" verticalAlignment="center" text="---" minimumScaleFactor="0.80000000000000004" id="o7O-ww-Fs5"/>
                                                 </items>
                                                 <color key="backgroundColor" red="0.79607843140000001" green="0.74509803919999995" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </group>
@@ -72,9 +72,9 @@
                                             <items>
                                                 <group width="90" height="90" alignment="center" backgroundImage="largering_0" contentMode="scaleAspectFit" id="ABM-xf-neG" userLabel="Primary Ring">
                                                     <items>
-                                                        <label alignment="center" verticalAlignment="center" text="88%" id="dor-0B-azF" userLabel="Primary Percentage">
+                                                        <label alignment="center" verticalAlignment="center" text="--%" id="dor-0B-azF" userLabel="Primary Percentage">
                                                             <fontDescription key="font" type="system" weight="light" pointSize="28"/>
-                                                            <variation key="device=watch42mm" text="88%">
+                                                            <variation key="device=watch42mm" text="--%">
                                                                 <fontDescription key="font" type="system" weight="light" pointSize="30"/>
                                                             </variation>
                                                         </label>
@@ -137,7 +137,7 @@
                                 <label alignment="left" text="🚘 Total:" id="e6O-gY-q7d">
                                     <fontDescription key="font" type="boldSystem" pointSize="14"/>
                                 </label>
-                                <label alignment="left" text="1234" id="8Om-ZM-UJN">
+                                <label alignment="left" text="----" id="8Om-ZM-UJN">
                                     <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                 </label>
                             </items>
@@ -147,13 +147,13 @@
                             <items>
                                 <group width="60" height="60" alignment="left" backgroundImage="parkring64" contentMode="center" id="pps-Iu-GNt" userLabel="Percentage Ring Group">
                                     <items>
-                                        <label alignment="center" verticalAlignment="center" text="64%" id="ZQm-sv-xtW"/>
+                                        <label alignment="center" verticalAlignment="center" text="--%" id="ZQm-sv-xtW"/>
                                     </items>
                                 </group>
                                 <group alignment="left" verticalAlignment="center" layout="vertical" id="qoW-Jw-n14">
                                     <items>
-                                        <label alignment="left" text="676 Free" id="X3x-yb-fnt"/>
-                                        <label alignment="left" text="Filling" id="ybQ-QW-1tC"/>
+                                        <label alignment="left" text="- Free" id="X3x-yb-fnt"/>
+                                        <label alignment="left" text="Status" id="ybQ-QW-1tC"/>
                                     </items>
                                 </group>
                             </items>
